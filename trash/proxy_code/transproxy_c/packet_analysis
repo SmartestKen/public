@@ -1,0 +1,26 @@
+ifconfig
+netstat -atunp
+
+
+
+Client Hello
+
+1 content type (0x16)
+2 version (0x0301-0x0303)
+2 length 
+1 handshake type (0x01)
+3 length (excluding header???)
+2 version (0x0301-0x0303)
+32 random
+43 session id length
+(sid length) session id
+2 cipher suite length
+(cs length, 2 byte each) cipher suite
+1 compression method length
+(cm length, 1 byte each) compression method
+2 extension length
+-----
+2 each extension type
+2 each extension length
+(ex length) each extension data
+----

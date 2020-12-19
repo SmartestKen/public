@@ -1,0 +1,28 @@
+ecotimehbs
+belt
+
+
+
+reduce
+
+    delete the match part
+    %% greedy match from right
+    ## greedy match from left
+    % non-greedy match from right
+    # non-greedy match from left
+    if [[ -f /home/public/temp_reduce/$session && "${session##*_}" = "exp" ]]
+    then
+        reduced_session=${session%_*}
+        if cp /temp/siteFilter.txt /tempCopy/.trash/$reduced_session
+        then
+            mv /tempCopy/.trash/$reduced_session /temp/sessions/$reduced_session
+            # optional as non exp will always stay before exp file in for loop
+            mv /temp/sessions/$session /tempCopy/.trash
+            
+            # need to receive potentially one last update, hence cannot simply make flag=0
+            if [[ $session = $active_session ]]
+            then
+                check_pt=-1
+            fi
+        fi
+    fi

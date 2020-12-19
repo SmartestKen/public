@@ -1,0 +1,12 @@
+Here are the two problems we will consider in this presentation.
+
+To begin with, we wish to decide the length of the stopper to give us the correct shooting angle. The only assumption in this analysis is that the stopper is inextensible. As you can see in the diagram, L_0, the distance from the base of the stopper to the pivot, L_1, the distance from pivot to where the other side of the stopper is tied on the arm and phi, the angle below horizon of the stopper base with respect to pivot are know. Hence, using cosine law, we can go from L_2 to theta or the other way around.
+
+The experimental stopper we obtained when the prototype shoots at 45 degree is relatively close to our theoretical prediction, as you can confirm from the percent error. 
+
+
+Another part we need to analyze is the type of spring we need to use. While we can infinitely increase the spring constant to potentially store more potential energy for conversion, doing that ends up breaking some of our prototype components like woods. Hence, we want the spring constant to be as small as possible given the disirable amount of compression displacement. To do that we use energy analysis with safety factor of 3. As you can see in the script, using differentiation, we obtain the fact that 45 degree is the optimal shooting angle. Consequently, we obtain the inequality for our spring constant.
+
+Once we obtain the spring constant, we can decide the type of spring we are going to use. In reality, this is equivalent to two Amazon rubber band on our real prototype, which turns out work fine while not breaking any of our system components.
+
+Last but not least, here is a sample FBD involved in our analysis. Specifically, this is related to calculate the initial angle of the arm and spring displacement when the system is at rest. But since this involves a two variable two equation system as shown in the other photo, we do not explain this analysis in detail here. You can ask us questions if you are interested.

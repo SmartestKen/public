@@ -1,0 +1,16 @@
+@ 09:30 11:30
+a *usmobile.com
+# zoom.us with school login
+a *zoom.us
+a d24cgw3uvb9a9h.cloudfront.net
+a accounts.google.com
+a ssl.gstatic.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  bu ^http(|s):\/\/www\.google\.com\/.*tbm=isch.*$
+  bu ^http(|s):\/\/www\.google\.com\/logos(|\/.*)$
+a www.googleapis.com
+
+
+

@@ -1,0 +1,65 @@
+a *math.ucsd.edu
+
+# stackoverflow
+a *stackoverflow.com
+a unix.stackexchange.com
+a math.stackexchange.com
+a tex.stackexchange.com
+a stats.stackexchange.com
+a cdn.sstatic.net
+a *superuser.com
+a *askubuntu.com
+a *serverfault.com
+a i.stack.imgur.com
+a ajax.googleapis.com
+a cdnjs.cloudflare.com
+
+
+# shellcheck
+a *shellcheck.net
+
+
+
+
+a *amazon.com
+a *ssl-images-amazon.com
+a *media-amazon.com
+a assets.pixel.prime.amazon.dev
+
+
+
+# google mail
+a mail.google.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+b www.google.com
+  au ^https?:\/\/www\.google\.com\/a\/ucsd\.edu\/acs$
+  au ^https?:\/\/www\.google\.com\/accounts\/signin\/continue\?.*$
+a myaccounts.google.com
+a accounts.google.com
+a ssl.gstatic.com
+
+
+
+# ecotime
+a ecotimecampus.ucsd.edu
+a ucsdcampus.ecotimebyhbs.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+
+
+b www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*(stick|tb(m|s))=.*$
+  au ^https?:\/\/www\.google\.com\/(|search\?.*)$
+  
+# outlook
+a *cdn.office.net
+a login.live.com
+a outlook.live.com
+a account.live.com
+a www.microsoft.com
+a ow2.res.office365.com
+a logincdn.msauth.net
+
+
+

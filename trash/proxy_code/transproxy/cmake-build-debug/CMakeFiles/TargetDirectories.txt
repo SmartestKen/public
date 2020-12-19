@@ -1,0 +1,3 @@
+/home/sync/k5shao/proxy_code/transproxy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sync/k5shao/proxy_code/transproxy/cmake-build-debug/CMakeFiles/transproxy.dir
+/home/sync/k5shao/proxy_code/transproxy/cmake-build-debug/CMakeFiles/edit_cache.dir

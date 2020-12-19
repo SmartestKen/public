@@ -1,0 +1,4 @@
+/home/k5shao/Downloads/clion-2019.3.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sync/k5shao/proxy_code/transproxy
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sync/k5shao/proxy_code/transproxy/cmake-build-debug

@@ -1,0 +1,35 @@
+a *math.ucsd.edu
+a *statweb.stanford.edu
+a *statistics.stanford.edu
+
+# stackoverflow
+a stackoverflow.com
+a unix.stackexchange.com
+a math.stackexchange.com
+a tex.stackexchange.com
+a stats.stackexchange.com
+a cdn.sstatic.net
+a superuser.com
+a askubuntu.com
+a serverfault.com
+a i.stack.imgur.com
+a ajax.googleapis.com
+a cdnjs.cloudflare.com
+
+
+
+# probability and stat support
+a *probabilitycourse.com
+a cdn.mathjax.org
+a cdnjs.cloudflare.com
+a *statlect.com
+
+
+
+# shellcheck
+a *shellcheck.net
+
+# search
+b www.google.com
+  bu ^http(|s):\/\/www\.google\.com\/.*(stick|ved|tb(m|s))=.*$
+  au ^http(|s):\/\/www\.google\.com\/(|search\?.*)$

@@ -1,0 +1,16 @@
+try to get a plug-in able formula for f_lda_nominator()
+try to get a formula for q^major_LHS = sum(...*q^major_RHS)
+-->column based experiment
+
+--> plug in 1-1 -> hook-length formula to get number of standard young tableau
+
+--> lda1 >= mu1 >= lda2 >= mu2 >= lda3 >= mu3
+
+
+->Zeilberger Wilf software (A=B)
+
+
+
+representation of a group
+morphism
+direct sum

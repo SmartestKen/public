@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="transproxy" targetName="transproxy" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdcb8d5c-e268-4e1a-84bd-e99ebb04a73d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="transproxy" />
+  </component>
+  <component name="ProjectId" id="1Zc6K0gJJvZC7melbAG9aV0i8Yl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="transproxy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="transproxy" TARGET_NAME="transproxy" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="transproxy" RUN_TARGET_NAME="transproxy">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="245" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1585126122965">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="536" y="245" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1585126122965" />
+    <state x="589" y="75" key="FileChooserDialogImpl" timestamp="1585352916780">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="589" y="75" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1585352916780" />
+    <state width="1575" height="294" key="GridCell.Tab.0.bottom" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.0.center" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.0.left" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.0.right" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.1.bottom" timestamp="1585352931380">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931380" />
+    <state width="1575" height="294" key="GridCell.Tab.1.center" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.1.left" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state width="1575" height="294" key="GridCell.Tab.1.right" timestamp="1585352931379">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1575" height="294" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1585352931379" />
+    <state x="-102" y="0" key="SettingsEditor" timestamp="1585163858529">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="-102" y="0" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1585163858529" />
+    <state x="418" y="41" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585223018913">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="418" y="41" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1044@0.0.1920.1044" timestamp="1585223018913" />
+    <state x="371" y="220" key="run.anything.popup" timestamp="1585265928515">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="371" y="220" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1585265928515" />
+    <state x="645" y="394" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585270825772">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="645" y="394" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1585270825772" />
+  </component>
+</project>

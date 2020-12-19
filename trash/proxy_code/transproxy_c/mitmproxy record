@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+! need libevent library (may be able to use epoll later)
+! need libssl-dev (openssl)
+!!! assume given some parameter, the build the known part first
+
+
+mitmdump.py
+
+
+_main.py
+
+master.py
+
+tcp.py init (listen socket)-> ... -> serve_forever -> connection thread (new connection)
+server -> 
+
+server.py handle_client_connection -> handle -> _create_root_layer (create a transparentProxy object)
+
+root_context.py -> RootContext
+
+transparentProxy.py -> __init__() -> __call__() (used by root_layer())
+
+-> platform.original_addr() (for original destination) -> next_layer()
+
+root_context.py next_layer() -> is_tls_record_magic() (check if it is tls) ->
+
+net/tls.py -> tls.ClientHello.from_file (check client hello) -> get_client_hello (return the client hello record) -> cls(raw_client_hello) or __init__ (parse the client hello and get all tls info)
+
+tls_client_hello.py -> __init__ (collect everything from Kaitai parser)
+
+root_context.py -> client_hello.sni (check sni info) -> start to decide what lowest layer
+to call -> 
+
+
+// to perform handshake
+protocol/tls.py -> _establish_tls_with_client() -> _find_cert() ->
+
+certs.py -> get_cert() -> dummy_cert() (generate dummy server certificate using the CA certificate)
+
+
+# to update default directory, may be needed aftetr installing openssl
+ldconfig
+
+cp /temp/transproxy_CA.crt /usr/local/share/ca-certificates/transproxy_CA.crt
+update-ca-certificates --fresh >/dev/null
+su k5shao -c "cp /temp/transproxy_CA.crt /home/k5shao/transproxy_CA.crt"
+su k5shao -c "certutil -d sql:/home/k5shao/.pki/nssdb -A -t 'CP,CP,' -n transproxy -i /home/k5shao/transproxy_CA.crt"
+
+
+
+
+
+certs.py-> create_ca() (generated at the very beginning for a CA certificate)
+layers:
+
+read.py read_request_head
+http1.py   
+
+
+openssl req -newkey rsa:2048 -nodes -keyout test.key -x509 -days 3650 -out test.crt
+openssl x509 -req -sha256 -days 3650 -in test.crt -signkey test.key -out test.pem
+
+
+
+
+
+
+
+--> establish_tls_connection

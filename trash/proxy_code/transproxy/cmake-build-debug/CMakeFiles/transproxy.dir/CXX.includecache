@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sync/k5shao/proxy_code/transproxy/main.cpp
+stdio.h
+-
+sys/socket.h
+-
+netdb.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+linux/netfilter_ipv4.h
+-
+linux/netfilter_ipv6/ip6_tables.h
+-
+event2/event.h
+-
+

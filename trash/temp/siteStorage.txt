@@ -1,0 +1,545 @@
+# website/functionality based (i.e. all dependencies to make a website fully function
+
+a *webcache.googleusercontent.com
+a *cachedview.com
+a *web.archive.org
+
+
+# sudo update-grub
+
+
+a chan.sankakucomplex.com
+a cs.sankakucomplex.com
+a *exhentai.org
+a *hath.network
+a *pornhub.com
+a *phncdn.com
+a *xvideos.com
+a *xvideos-cdn.com
+
+
+
+
+a *agefans.tv
+a *s3.pstatp.com
+a *cdn.jinfu.love
+a *gate-anime.com
+a extshort.weixin.qq.com
+a www.duplichecker.com
+a www.view-page-source.com
+a ogp.me
+a *webtoolhub.com
+a www.visiospark.com
+a *submitexpress.com
+a *htmlstrip.com
+a *codebeautify.org
+a *jsonformatter.org
+
+
+a images.google.com
+b www.google.com
+  au ^https?:\/\/www\.google\.com\/.*&tbm=isch.*$
+  au ^https?:\/\/www\.google\.com\/searchbyimage\/upload$
+  au ^https?:\/\/www\.google\.com\/searchbyimage$
+  au ^https?:\/\/www\.google\.com\/search\?tbs=sbi:.*$
+  bu ^https?:\/\/www\.google\.com\/.*(stick|tb(m|s))=.*$
+  au ^https?:\/\/www\.google\.com\/(|search\?.*)$
+a www.gstatic.com
+a encrypted-tbn0.gstatic.com
+a *google.com
+
+a *play.warofomens.com
+a *badger.c5games.com
+a *ssl.hwcdn.net
+b *kongregate.com
+  au ^https:\/\/www\.kongregate\.com\/games\/FifthColumnGames\/war-of-omens$
+  au ^https:\/\/www\.kongregate\.com\/session$
+  au ^https:\/\/www\.kongregate\.com\/accounts\/.*$
+a apis.google.com
+a accounts.google.com
+a ssl.gstatic.com
+a *kongcdn.com
+a *cdn1.kongregate.com
+
+
+
+# stackoverflow
+a stackoverflow.com
+a unix.stackexchange.com
+a math.stackexchange.com
+a tex.stackexchange.com
+a stats.stackexchange.com
+a cdn.sstatic.net
+a superuser.com
+a askubuntu.com
+a serverfault.com
+a i.stack.imgur.com
+a ajax.googleapis.com
+a cdnjs.cloudflare.com
+
+
+a *amazon.com
+
+
+a *ssl-images-amazon.com
+a *media-amazon.com
+a assets.pixel.prime.amazon.dev
+
+a *allure.com
+a *thechaingang.com
+a *squirrelmunk.com
+
+
+a *1688.com
+a *aliapp.org
+a *mmstat.com
+a *alicdn.com
+a *aliexpress.com
+a *akamaized.net
+a *taobao.com
+a *aliyun.com
+a *alibaba.com
+# 1. wake up, put in penis
+# 2. go to school and study till at least 23:00
+# 3. back, cook, pull out penis and sleep
+# wechat
+a *aliyuncs.com
+a extshort.weixin.qq.com
+a docs.fortinet.com
+a forms.gle
+a docs.google.com
+a *dungeoneers.com
+a *hcaptcha.com
+a sites.google.com
+a *amazon.ca
+a *wikipedia.org
+a *wikimedia.org
+a *iysw.net
+a *sanhaoxs.net
+a *txtren.cc
+a *mvp.dlxk.com
+a *bxwxorg.com
+a *84sk.com
+a *theverge.com
+a *ucsd.edu
+a *speedrun.com
+# qq
+a sqimg.qq.com
+a 203.205.239.140
+a 120.204.18.51
+a *arcadeprehacks.com
+
+a *play.warofomens.com
+a *badger.c5games.com
+a f3k8d5p9.map2.ssl.hwcdn.net
+
+a ecotimecampus.ucsd.edu
+a ucsdcampus.ecotimebyhbs.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a *phncdn.com
+a *pornhub.com
+a *kongregate.com
+a *kongcdn.com
+a *unity3d.com
+a *konggames.com
+# search
+a www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*(stick|tb(m|s))=.*$
+  au ^https?:\/\/www\.google\.com\/(|search\?.*)$
+
+  
+# google voice
+a voice.google.com
+  
+  
+a *usmobile.com
+# zoom.us with school login
+a *zoom.us
+a d24cgw3uvb9a9h.cloudfront.net
+a accounts.google.com
+a ssl.gstatic.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*tbm=isch.*$
+  bu ^https?:\/\/www\.google\.com\/logos(|\/.*)$
+a www.googleapis.com
+
+a encrypted-tbn0.gstatic.com
+a *armorgames.com
+# mail.google.com
+a mail.google.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  au ^https?:\/\/www\.google\.com\/a\/ucsd\.edu\/acs$
+  au ^https?:\/\/www\.google\.com\/accounts\/signin\/continue\?.*$
+a www.gstatic.com 
+a *livingspaces.com
+a *cdnjs.cloudflare.com
+a *intercom.io
+a *homedepot.com
+a *homedepot-static.com
+a *intercomcdn.com
+a *cdn.polyfill.io
+a badge.c5games.com
+a *chase.com
+a *chasecdn.com
+a *feiku.com
+a *baishuku.com
+a *xszww.com
+a *usmobile.com
+a *ptwxz.com
+a *qiqint.com
+a *qiqint.la
+a *wrltxt.com
+a *wrlwx.com
+a *zhidao.baidu.com
+a *tuishujun.com
+a *qishus.com
+a *aixdzs.com
+a *xqishu.com
+a *downxs.com
+a ibiqiuge.com
+a *365book.net
+a *mybook.show
+a *555x.org
+b *shubao90.com
+a *snwx3.com
+a *mybookmark.vip
+a *snwxx.com
+a *qinkan.net
+a *mytxt.cc
+a *xiaoshuodaquan.com
+
+a *nectarsleep.com
+a *sleepovation.com
+a *hunker.com
+a *mattressnut.com
+a *xiuzhent.com
+a *balingtxt.com
+a *shuyaya.cc
+a *fanfann.com
+a *xshuyaya.com
+a *qunshuku.com
+a *xqishuta.com
+a *zxcs.me
+a *xiashu99.com
+a *45.196
+a *97.38
+a *bookben.net
+a *52biquge.com
+a *kusuu.net
+# amazon.com
+ 
+a ssl.gstatic.com
+
+
+
+a *youtube.com
+a *googlevideo.com
+a *typingchinese.com
+
+# mail.google.com
+a mail.google.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  au ^https?:\/\/www\.google\.com\/a\/ucsd\.edu\/acs$
+  au ^https?:\/\/www\.google\.com\/accounts\/signin\/continue\?.*$
+a www.gstatic.com 
+
+a *mkt7783.com
+
+# nobelcourt.com
+a www.nobelcourt.com
+a nobelcourt.securecafe.com
+a *bootstrapcdn.com
+a cdngeneral.rentcafe.com
+a cdnjs.cloudflare.com
+a www.redditstatic.com
+a ajax.googleapis.com
+
+
+a *reddit.com
+
+
+
+# 1688.com
+b *1688.com
+a *alicdn.com
+b *taobao.com
+a *aliexpress.com
+a *aliyun.com
+a *taobao.com
+a *alibaba.com
+a *acrcloud.com
+a *uukanshu.com
+
+a *e-hentai.org
+a *exhentai.org
+a *hath.network
+a *qidian.com
+a *zhihu.com
+a *quora.com
+a *quoracdn.net
+
+# paypal
+a *paypal.com
+a *paypalobjects.com
+
+a *aliapp.org
+a *alipayobjects.com
+a *ehwiki.org
+
+a *alipay.com
+# outlook.live.com
+a *cdn.office.net
+a login.live.com
+a outlook.live.com
+a account.live.com
+a www.microsoft.com
+a ow2.res.office365.com
+a logincdn.msauth.net 
+-----------------------------------------------------------------
+
+a *math.ucsd.edu
+a *statweb.stanford.edu
+a *statistics.stanford.edu
+
+
+
+# probability and stat support
+a *probabilitycourse.com
+a cdn.mathjax.org
+a cdnjs.cloudflare.com
+a *statlect.com
+
+# bust 33
+
+
+# shellcheck
+a *shellcheck.net
+
+
+
+# overleaf
+a *overleaf.com
+a accounts.google.com
+a ssl.gstatic.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+b www.google.com
+  au ^https?:\/\/www\.google\.com\/a\/ucsd\.edu\/acs$
+  au ^https?:\/\/www\.google\.com\/accounts\/signin\/continue\?.*$
+a www.googleapis.com
+
+ 
+# search
+b www.google.com
+  au ^https?:\/\/www\.google\.com\/.*(stick|ved|tb(m|s))=.*$
+  au ^https?:\/\/www\.google\.com\/(|search\?.*)$
+
+
+
+
+-----------------------------------------------------------------------------------
+
+
+
+
+ 
+
+
+
+
+# stackoverflow
+a www.geeksforgeeks.org
+a stackoverflow.com
+a *stackexchange.com
+a cdn.sstatic.net
+a superuser.com
+a askubuntu.com
+a serverfault.com
+a i.stack.imgur.com
+a ajax.googleapis.com
+
+# google search
+a www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*tbm=isch.*$
+  bu ^https?:\/\/www\.google\.com\/logos(|\/.*)$
+
+
+a *ubuntu.com
+
+# libgen.is
+a libgen.is
+a 93.174.95.29
+a libgen.lc
+a booksdl.org
+
+a *ucsd.edu
+
+
+
+
+
+
+
+
+
+
+# student chart and vac
+a *ucsd.edu
+
+
+
+
+a *painfulpleasures.com
+
+
+
+a *ebay.com
+a *ebaystatic.com
+
+
+
+
+# google drive
+a drive.google.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  au ^https?:\/\/www\.google\.com\/.*tbm=isch.*$
+  au ^https?:\/\/www\.google\.com\/logos(|\/.*)$
+a www.gstatic.com
+a *-docs.googleusercontent.com
+
+
+
+# typing chinese
+a *typingchinese.com
+
+
+
+
+
+# google search
+a www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*tbm=isch.*$
+  bu ^https?:\/\/www\.google\.com\/logos(|\/.*)$
+  
+# zoom.us with school login
+a *zoom.us
+a d24cgw3uvb9a9h.cloudfront.net
+a accounts.google.com
+a ssl.gstatic.com
+a api-ce13a1a7.duosecurity.com
+a a5.ucsd.edu
+a www.google.com
+  bu ^https?:\/\/www\.google\.com\/.*tbm=isch.*$
+  bu ^https?:\/\/www\.google\.com\/logos(|\/.*)$
+a www.googleapis.com
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+# sagemath.org
+a *sagemath.org
+
+
+# overleaf.com
+a *overleaf.com
+
+
+
+ 
+
+  
+
+# usmobile.com
+a *usmobile.com
+
+
+
+
+
+
+
+
+
+
+
+# turnitin
+a *turnitin.com
+
+
+                                                                                        
+
+# gradescope.com
+a www.gradescope.com
+a production-gradescope-uploads.s3-us-west-2.amazonaws.com
+
+
+# online2pdf.com
+a *online2pdf.com
+
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+# arxiv.org
+b *arxiv.org
+  a arxiv.org 
+    bu ^https?:\/\/arxiv\.org\/user(|\/.*)$
+  a static.arxiv.org
+
+
+
+# sage.com
+a myaccount.sdge.com
+
+
+
+
+# chase.com
+a *chase.com
+a *chasecdn.com
+
+
+# pip
+b pypi.python.org
+b pypi.org
+b files.pythonhosted.org
+
+
+
+
+
+
+
+

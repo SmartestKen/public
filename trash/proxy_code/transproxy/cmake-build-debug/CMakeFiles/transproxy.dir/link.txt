@@ -1,0 +1,1 @@
+/usr/bin/c++  -fpermissive -g   CMakeFiles/transproxy.dir/main.cpp.o  -o transproxy  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -levent 

@@ -1,0 +1,55 @@
+http://arxiv.org/abs/2011.13580 
+(persistent homology and sheaf theory)
+http://arxiv.org/abs/2011.14057 
+(multivariate persistent homology, served as a preprocessing step to extract feature from raw input before feed into CNN)
+http://arxiv.org/abs/2011.14688
+(use neural network to simulate persistent diagram/piepline themselves (rather than using them as a preprocessing tool)
+http://arxiv.org/abs/2012.00091
+(manifold learning (dimensionality reduction) using contagion map)
+http://arxiv.org/abs/2012.00120
+(use sheaf to control graph (nodes/edges) dynamics)
+http://arxiv.org/abs/2012.00783
+[useless, apply persistent homology to statistical physics]
+http://arxiv.org/abs/2012.01141
+(given a group representation, define one network for each generator and use the relations in the representation as loss functions)
+http://arxiv.org/abs/2012.03903
+[useless, theoretical on correlation/convariance matrices]
+http://arxiv.org/abs/1709.07308
+(use edge disjoint path as features to predict if two nodes are in the same cluster (i.e. if their relationship is positive))
+http://arxiv.org/abs/2012.03450
+[useless, theoretical on herimitian matrix]
+http://arxiv.org/abs/2011.11709
+[useless, city management problem]
+http://arxiv.org/abs/2012.04597
+(iterated sum signatures of time series)
+http://arxiv.org/abs/2012.04092
+(information (entropy) inequalities)
+http://arxiv.org/abs/2012.04909
+[useless, robotics]
+http://arxiv.org/abs/2007.04688
+(constrained parametric optimization)
+http://arxiv.org/abs/2012.05120
+[useless, robotics]
+http://arxiv.org/abs/2012.04868
+(algorithm to count the number of roots of a polynomial system with bounded coeffcients)
+http://arxiv.org/abs/2012.04715
+(SAT resolution to whether a projective plane of order 10 exists, no neural network involved)
+http://arxiv.org/abs/2012.06333
+(graph neural network with sheaf laplacian)
+http://arxiv.org/abs/2012.06607 
+(increase precision of algebraic computation by parallel threads)
+http://arxiv.org/abs/2012.07621
+(new metric for persistent homology)
+--------before--------
+http://arxiv.org/abs/2012.08152 
+(algorithm for optimal task scheduling)
+http://arxiv.org/abs/2012.07903 
+(algorithm for unconstrained polynomial optimization)
+--------end of 2020-12-16--------
+--------end of 2020-12-17--------
+http://arxiv.org/abs/2012.09743
+(clustering algorithm)
+http://arxiv.org/abs/2012.09202
+(clustering algorithm)
+--------end of 2020-12-18--------
+--------end of 2020-12-19--------

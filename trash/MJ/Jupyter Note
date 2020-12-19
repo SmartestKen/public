@@ -1,0 +1,68 @@
+
+   "source": [
+    "%run superpartition2.py"
+   ]
+
+   
+   "source": [
+    "def RSK_possibilities(Q_row,P_row):\n",
+    "    possible_Q = AllTableaux_h_Zero(Q_row)\n",
+    "    possible_P = AllTableaux_e_Infinity(P_row)\n",
+    "    output = []\n",
+    "    for i in possible_P:\n",
+    "        for j in possible_Q:\n",
+    "            if shape(i[0]) == shape(j[0]):\n",
+    "                output = output + [[i,j]]\n",
+    "    for p in output:\n",
+    "        drawTableauxNumbersPLT(p,1,2,12)\n",
+    "    "
+   ]
+  },
+
+   ],
+   "source": [
+    "RSK_possibilities([1,-2],[1,-1,1])"
+   ]
+
+   "source": [
+    "RSK_possibilities([-1,1],[1,1,0])"
+   ]
+  },
+ 
+   "source": [
+    "RSK_possibilities([1,3],[1,2,1])"
+   ]
+  },
+  {
+   
+    }
+   ],
+   "source": [
+    "RSK_possibilities([2,0],[1,-1])"
+   ]
+   ],
+   "source": [
+    "RSK_possibilities([2,1],[1,2])"
+   ]
+  },
+    }
+   ],
+   "source": [
+    "RSK_possibilities([2,0,2],[-1,1,2])"
+   ]
+
+    }
+   ],
+   "source": [
+    "AT = AllTableaux_h_Zero([3,-1])\n",
+    "drawTableauxNumbersPLT(AT,3,2,12)\n",
+    "for t in AT:\n",
+    "    print(shape(t[0]))"
+ ,
+
+   "source": [
+    "AllFillingsZero([2,0],[1,1])"
+   ]
+  },
+
+

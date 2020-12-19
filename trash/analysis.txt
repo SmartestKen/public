@@ -1,0 +1,4 @@
+exit velocity, spring constant -> rubber band displacement
+velocity/displacement -> spring constant
+weight -> gear
+angular acceleration and full rotation for bottom gear
