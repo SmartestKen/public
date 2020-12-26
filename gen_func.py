@@ -111,10 +111,10 @@ import numpy as np
 
 
 model = keras.Sequential()
-model.add(keras.Input(shape=(lda_max*3,)))
-model.add(layers.Dense(512, activation='relu', kernel_regularizer= regularizers.l2(0.001)))
+model.add(keras.Input(shape=(1,)))
+model.add(layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001)))
 model.add(layers.Dropout(0.2))
-model.add(layers.Dense(128, activation='relu', kernel_regularizer=regularizers.l2(0.001)))
+model.add(layers.Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.001)))
 model.add(layers.Dense(2, activation='softmax'))
 
 Optim = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=True)
