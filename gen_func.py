@@ -7,35 +7,9 @@
 # input: 2 src , 1 target partition
 # output: whether it is zero
 
-def get_partitions(max):
 
-    partitions = [[] for i in range(max+1)]
-    for n in range(1,max+1):
-        # compute partition with sum = n
-        # an obvious one is [n]
-        partitions[n] = [(n,)]
-        for i in range(1,n):
-            for item in partitions[n-i]:
-                if item[0] <= i:
-                    partitions[n].append(tuple([i] + list(item)))
 
-    return partitions
 
-uv_max = 10
-lda_max = 2*uv_max
-
-partitions = [j for sub in get_partitions(uv_max) for j in sub]
-input_str = ['' for i in range(lda_max)]
-for p1 in partitions:
-    for p2 in partitions:
-        input_str[sum(p1) + sum(p2) - 1] += ' '.join(map(str, p1)) + ' - ' + ' '.join(map(str, p2)) + '\n'
-
-concated_input = ''
-for i in range(lda_max):
-    concated_input += input_str[i]
-
-with open('/home/public/LR_in', 'w') as f:
-    f.write(concated_input)
 
 
 
