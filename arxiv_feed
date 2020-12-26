@@ -3,14 +3,12 @@ http://arxiv.org/abs/2011.13580
 http://arxiv.org/abs/2011.14057 
 (multivariate persistent homology, served as a preprocessing step to extract feature from raw input before feed into CNN)
 http://arxiv.org/abs/2011.14688
-(use neural network to simulate persistent diagram/piepline themselves (rather than using them as a preprocessing tool)
 http://arxiv.org/abs/2012.00091
 (manifold learning (dimensionality reduction) using contagion map)
 http://arxiv.org/abs/2012.00120
 (use sheaf to control graph (nodes/edges) dynamics)
 http://arxiv.org/abs/2012.00783
 http://arxiv.org/abs/2012.01141
-(given a group representation, define one network for each generator and use the relations in the representation as loss functions)
 http://arxiv.org/abs/2012.03903
 http://arxiv.org/abs/1709.07308
 http://arxiv.org/abs/2012.03450
