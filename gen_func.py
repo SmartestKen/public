@@ -11,7 +11,10 @@ for i in range(10000):
     index = 0
     if randrange(10) > 6:
         index = 1
-    data_in[index].append(1/
+    x = i/10000
+    data_in[index].append(x)
+    data_out[index].append(1/(1-x))
+
 
 
 
