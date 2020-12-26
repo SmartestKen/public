@@ -24,12 +24,19 @@ from tensorflow.keras import layers,regularizers,optimizers
 from tensorflow.keras.models import Model
 
 
-x0 = keras.Input(shape=(1,))
-x1 = layers.Dense(256, activation='relu', kernel_initializer = 'normal')(x0)
-x2 = layers.Dense(32, activation='relu', kernel_initializer = 'normal')(x1)
-x3 = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(x2)
+input = keras.Input(shape=(1,))
 
-model = Model(x0, x3)
+temp_res = input
+temp = layers.Dense(512, activation='relu', kernel_initializer = 'normal')(input)
+temp = layers.Add()([temp, temp_res])
+
+temp_res = temp
+temp = layers.Dense(64, activation='relu', kernel_initializer = 'normal')(temp)
+temp = layers.Add()([temp, temp_res])
+
+output = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(temp)
+
+model = Model(input, output)
 
 Optim = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=True)
 
