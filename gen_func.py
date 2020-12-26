@@ -104,17 +104,19 @@ exit(0)
 
 
 
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers,regularizers,optimizers
+
 import numpy as np
 
+
+from tensorflow import keras
+from tensorflow.keras import layers,regularizers,optimizers
+from tensorflow.keras.models import Model
+
 def forward():
-    input = keras.Input(shape=(1,))
+    x = keras.Input(shape=(1,))
+    x = layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001))(x)
 
 
-    model.add(keras.Input(shape=(1,)))
-    model.add(layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001)))
     model.add(layers.Dropout(0.2))
     model.add(layers.Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.001)))
     model.add(layers.Dense(2, activation='softmax'))
