@@ -13,7 +13,7 @@ for i in range(10000):
     x = -i/10000
     print(x)
     data_in[index].append(x)
-    data_out[index].append(1 - math.sqrt(1-2*x))
+    data_out[index].append(1/(1-x))
 
 
 
