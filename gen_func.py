@@ -26,16 +26,16 @@ from tensorflow.keras.models import Model
 
 def forward():
     x = keras.Input(shape=(1,))
-    x = layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001))(x)
+    x = layers.Dense(64, activation='relu', kernel_initializer = 'normal')(x)
     x = layers.Dropout(0.2)(x)
-    x = layers.Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.001))(x)
-    x = layers.Dense(2, activation='softmax')
+    x = layers.Dense(16, activation='relu', kernel_initializer = 'normal')(x)
+    x = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(x)
 
     model = Model(input, output)
 
     Optim = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=True)
 
-    model.compile(optimizer=Optim,loss='categorical_crossentropy', metrics=['acc'])
+    model.compile(optimizer=Optim,loss='mean_absolute_error', metrics=['mean_absolute_error'])
     model.summary()
 
     # data_tfin = tf.convert_to_tensor(np.asarray(data_in[0]), np.float32)
