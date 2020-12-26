@@ -27,7 +27,7 @@ from tensorflow.keras.models import Model
 input = keras.Input(shape=(1,))
 
 temp_res = input
-temp = layers.Dense(512, kernel_initializer = 'normal')(input)
+temp = layers.Dense(512, activation = 'relu', kernel_initializer = 'normal')(input)
 temp = layers.Add()([temp, temp_res])
 temp = layers.ReLU()(temp)
 
