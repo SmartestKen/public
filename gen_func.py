@@ -10,10 +10,10 @@ for i in range(10000):
     index = 0
     if randrange(10) > 6:
         index = 1
-    x = -i/10000
+    x = i/10000
     print(x)
     data_in[index].append(x)
-    data_out[index].append(1/math.sqrt(1-4*x))
+    data_out[index].append(1/(1-x**2))
 
 
 
