@@ -27,12 +27,14 @@ from tensorflow.keras.models import Model
 input = keras.Input(shape=(1,))
 
 temp_res = input
-temp = layers.Dense(512, activation='relu', kernel_initializer = 'normal')(input)
+temp = layers.Dense(512, kernel_initializer = 'normal')(input)
 temp = layers.Add()([temp, temp_res])
+temp = layers.ReLU()(temp)
 
 temp_res = temp
-temp = layers.Dense(64, activation='relu', kernel_initializer = 'normal')(temp)
+temp = layers.Dense(64, kernel_initializer = 'normal')(temp)
 temp = layers.Add()([temp, temp_res])
+temp = layers.ReLU()(temp)
 
 output = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(temp)
 
