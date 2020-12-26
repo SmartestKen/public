@@ -109,13 +109,17 @@ from tensorflow import keras
 from tensorflow.keras import layers,regularizers,optimizers
 import numpy as np
 
+def forward():
+    input = keras.Input(shape=(1,))
 
-model = keras.Sequential()
-model.add(keras.Input(shape=(1,)))
-model.add(layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001)))
-model.add(layers.Dropout(0.2))
-model.add(layers.Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.001)))
-model.add(layers.Dense(2, activation='softmax'))
+
+    model.add(keras.Input(shape=(1,)))
+    model.add(layers.Dense(64, activation='relu', kernel_regularizer= regularizers.l2(0.001)))
+    model.add(layers.Dropout(0.2))
+    model.add(layers.Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.001)))
+    model.add(layers.Dense(2, activation='softmax'))
+
+    model = Model(input, output)
 
 Optim = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=True)
 
