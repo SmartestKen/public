@@ -44,8 +44,16 @@ model.summary()
 
 # !!! actual input always of the shape (batch_size, ...),
 # but there may be syntax difference across frameworks
-model.fit(np.asarray(data_in[0]), np.asarray(data_out[0]), epochs = 1000, verbose = 2,
+history = model.fit(np.asarray(data_in[0]), np.asarray(data_out[0]), epochs = 100, verbose = 2,
     validation_data = (np.asarray(data_in[1]), np.asarray(data_out[1])), validation_freq = 5)
 
+import matplotlib.pyplot as plt
 
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
 
