@@ -44,13 +44,14 @@ model.summary()
 
 # !!! actual input always of the shape (batch_size, ...),
 # but there may be syntax difference across frameworks
-history = model.fit(np.asarray(data_in[0]), np.asarray(data_out[0]), epochs = 100, verbose = 2,
+max_epoch = 100
+history = model.fit(np.asarray(data_in[0]), np.asarray(data_out[0]), epochs = max_epoch, verbose = 2,
     validation_data = (np.asarray(data_in[1]), np.asarray(data_out[1])), validation_freq = 5)
 
 import matplotlib.pyplot as plt
-
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
+print(history.history.keys())
+plt.plot(history.history['mean_absolute_error'])
+plt.plot(list(range(0,max_epoch,5)), history.history['val_mean_absolute_error'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
