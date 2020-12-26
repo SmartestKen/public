@@ -18,7 +18,7 @@ for i in range(10000):
 
 
 import numpy as np
-
+import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers,regularizers,optimizers
 from tensorflow.keras.models import Model
@@ -26,12 +26,11 @@ from tensorflow.keras.models import Model
 
 input = keras.Input(shape=(1,))
 
-temp_res = input
+
 temp = layers.Dense(512, activation = 'relu', kernel_initializer = 'normal')(input)
-temp = layers.Add()([temp, temp_res])
 temp = layers.ReLU()(temp)
 
-temp_res = temp
+temp_res = tf.concat(input*64, 0)
 temp = layers.Dense(64, kernel_initializer = 'normal')(temp)
 temp = layers.Add()([temp, temp_res])
 temp = layers.ReLU()(temp)
