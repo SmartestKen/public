@@ -30,10 +30,10 @@ input = keras.Input(shape=(1,))
 temp = layers.Dense(512, activation = 'relu', kernel_initializer = 'normal')(input)
 temp = layers.ReLU()(temp)
 
-temp_res = tf.concat(input*64, 0)
-temp = layers.Dense(64, kernel_initializer = 'normal')(temp)
-temp = layers.Add()([temp, temp_res])
-temp = layers.ReLU()(temp)
+# temp_res = tf.concat(input*64, 0)
+temp = layers.Dense(64, activation = 'relu', kernel_initializer = 'normal')(temp)
+# temp = layers.Add()([temp, temp_res])
+# temp = layers.ReLU()(temp)
 
 output = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(temp)
 
