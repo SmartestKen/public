@@ -141,3 +141,9 @@ with open('/home/public/Rent_Utility/rent.txt', 'a') as file:
     file.write('Dec    %7.3f      %7.3f       %7.3f         %7.3f\n' % (
         rent * 0.3 + utility * 0.4, rent * 0.25 + utility * 0.2, rent * 0.2 + utility * 0.4,
         rent * 0.25 + utility * 0))
+
+    rent = 2516.91 + 5
+    utility = 73.97
+    file.write('Jan    %7.3f      %7.3f       %7.3f         %7.3f\n' % (
+        rent * 0.3 + utility * 0.4, rent * 0.25 + utility * 0.2, rent * 0.2 + utility * 0.4,
+        rent * 0.25 + utility * 0))
