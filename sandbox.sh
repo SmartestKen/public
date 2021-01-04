@@ -55,6 +55,7 @@ umount /home/k5shao/matlabTemp
 mount -o loop /home/k5shao/Downloads/MatlabR2018b_LinuxX64_DVD2_downloader.ga.iso /home/k5shao/matlabTemp
 umount /home/k5shao/matlabTemp
 rmdir /home/k5shao/matlabTemp
+# install dir by default is /usr/local/MATLAB/R2018b, can switch to anything else
 cp /home/k5shao/Downloads/Matlab\ R2018b\ Linux64\ Crack\ Only/license_standalone.lic /usr/local/MATLAB/R2018b/licenses/
 cp -f /home/k5shao/Downloads/Matlab\ R2018b\ Linux64\ Crack\ Only/bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so /usr/local/MATLAB/R2018b/bin/glnxa64/matlab_startup_plugins/lmgrimpl/
 
