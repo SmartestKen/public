@@ -32,7 +32,7 @@ done
 
 # index 0 resting session, index 1 working session
 index=0
-trap "index=$((1-index))" SIGINT
+trap "break" SIGINT
 # how many working session per resting session
 multiplier=1
 
@@ -61,6 +61,7 @@ do
         curEpoch=`date +%s`
     done
     
+    index=$((1-index))
     # echo -ne "\033[2K\rTime's up"
 done
 
