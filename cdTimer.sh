@@ -34,7 +34,7 @@ done
 index=0
 trap "break" SIGINT
 # how many working session per resting session
-multiplier=2
+multiplier=1
 
 
 while true
