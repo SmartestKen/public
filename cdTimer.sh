@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-end_session_right_now() {
-    echo "Next session"
-}
 
 # kill other timers
 
@@ -37,7 +34,7 @@ fi
 
 endEpoch=$(($curEpoch+$time))
 
-trap 'end_session_right_now' SIGINT
+trap "echo hello" SIGINT
 
 while [ $curEpoch -lt $endEpoch ]
 do
