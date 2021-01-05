@@ -34,7 +34,7 @@ done
 index=0
 trap "break" SIGINT
 # how many working session per resting session
-multiplier=1
+multiplier=2
 
 
 while true
@@ -46,7 +46,7 @@ do
         type="(Resting)"
     else
         time=900
-        type="(Working)"
+        type="(Working $index)"
     fi
         
     curEpoch=`date +%s`
@@ -61,7 +61,12 @@ do
         curEpoch=`date +%s`
     done
     
-    index=$((1-index))
+    if [[ $index -eq $multiplier ]]
+    then
+        index=0
+    else
+        index=$((index+1))
+    fi
     # echo -ne "\033[2K\rTime's up"
 done
 
