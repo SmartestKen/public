@@ -39,12 +39,7 @@ mainLoop() {
 
     
     echo -ne "\033[2K\rTime's up"
-    
-    
-    if [ "${2:-None}" == "end" ]
-    then
-        shutdown -h now
-    fi
+
 
 }
 
@@ -59,7 +54,7 @@ done
 
 
 # remember to pass arguments into the function
-mainLoop "$1" "$2" &
+mainLoop "$1" &
 
 
 
