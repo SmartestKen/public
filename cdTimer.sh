@@ -11,7 +11,7 @@ mainLoop() {
     curEpoch=`date +%s`
 
     # default session 15 minutes
-    time=${1:-'0:30:00'}
+    time=${1:-'0:15:00'}
     IFS=':' read -ra time <<< "$time"
 
 
