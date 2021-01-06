@@ -41,19 +41,22 @@ while true
 do
 
         
-    curEpoch=`date +%s`
-    endEpoch=$(($curEpoch+$time))
-
-
+    
+    
     # elapse in seconds
     if [[ index -eq 0 ]]
     then
         time=600
-        type="(Resting start: $curEpoch end: $endEpoch)"
+        
+        type="(Resting start: `date +"%H:%M"`)"
     else
         time=900
-        type="(Working $index start: $curEpoch end: $endEpoch)"
+        endEpoch=$(($curEpoch+$time))
+        type="(Working $index start: `date +"%H:%M"`)"
     fi
+    
+    curEpoch=`date +%s`
+    endEpoch=$(($curEpoch+$time))
     
     
     while [ $curEpoch -lt $endEpoch ]
@@ -78,12 +81,3 @@ done
 
 # remember to pass arguments into the function
 # mainLoop "$1" &
-
-
-
-
-
-
-
-
-
