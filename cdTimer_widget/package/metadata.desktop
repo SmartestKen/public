@@ -1,1 +1,10 @@
- 
+[Desktop Entry]
+Name=Cdtimer
+
+Type=Service
+Icon=battery
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
