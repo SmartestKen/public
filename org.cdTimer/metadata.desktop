@@ -1,10 +1,13 @@
 [Desktop Entry]
-Name=Cdtimer
-
+Icon=preferences-system-time
 Type=Service
-Icon=battery
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Name=org.cdTimer
 X-KDE-ServiceTypes=Plasma/Applet
-
 X-Plasma-API=declarativeappletscript
+X-KDE-PluginInfo-Category=Date and Time
+X-Plasma-Provides=org.kde.plasma.time,org.kde.plasma.date
+
 X-Plasma-MainScript=ui/main.qml
+X-Plasma-RemoteLocation=
 
