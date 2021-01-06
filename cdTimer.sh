@@ -39,20 +39,23 @@ multiplier=1
 
 while true
 do
-    # elapse in seconds
-    if [[ index -eq 0 ]]
-    then
-        time=600
-        type="(Resting)"
-    else
-        time=900
-        type="(Working $index)"
-    fi
+
         
     curEpoch=`date +%s`
     endEpoch=$(($curEpoch+$time))
 
 
+    # elapse in seconds
+    if [[ index -eq 0 ]]
+    then
+        time=600
+        type="(Resting start: $curEpoch end: $endEpoch)"
+    else
+        time=900
+        type="(Working $index start: $curEpoch end: $endEpoch)"
+    fi
+    
+    
     while [ $curEpoch -lt $endEpoch ]
     do
         
@@ -60,6 +63,8 @@ do
         sleep 30
         curEpoch=`date +%s`
     done
+    
+    echo "Time's up $type"
     
     if [[ $index -eq $multiplier ]]
     then
