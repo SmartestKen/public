@@ -67,7 +67,7 @@ do
         curEpoch=`date +%s`
     done
     
-    echo "Time's up $type"
+    echo -e "\033[2K\rTime's up $type"
     
     if [[ $index -eq $multiplier ]]
     then
