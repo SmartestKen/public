@@ -51,7 +51,6 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
-    Plasmoid.fullRepresentation: CalendarView { }
 
     Plasmoid.toolTipItem: Loader {
         id: tooltipLoader
