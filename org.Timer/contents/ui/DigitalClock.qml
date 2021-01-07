@@ -221,6 +221,7 @@ Item {
     //
     // What happens here is that it looks for the delimiter between "h" and "m", takes it
     // and appends it after "mm" and then appends "ss" for the seconds.
+    
     function timeFormatCorrection(timeFormatString) {
         var regexp = /(hh*)(.+)(mm)/i
         var match = regexp.exec(timeFormatString);
