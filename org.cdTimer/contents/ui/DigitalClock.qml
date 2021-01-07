@@ -380,17 +380,8 @@ Item {
         var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
         var date = new Date(2000, 0, 1, 1, 0, 0);
-        var timeAm = Qt.formatTime(date, format);
-        var advanceWidthAm = timeMetrics.advanceWidth(timeAm);
-        date.setHours(13);
-        var timePm = Qt.formatTime(date, format);
-        var advanceWidthPm = timeMetrics.advanceWidth(timePm);
         // set the sizehelper's text to the widest time string
-        if (advanceWidthAm > advanceWidthPm) {
-            sizehelper.text = timeAm;
-        } else {
-            sizehelper.text = timePm;
-        }
+
     }
 
     function dateTimeChanged()
