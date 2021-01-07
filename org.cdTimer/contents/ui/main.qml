@@ -52,24 +52,12 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
 
-    Plasmoid.toolTipItem: Loader {
-        id: tooltipLoader
 
-        Layout.minimumWidth: item ? item.width : 0
-        Layout.maximumWidth: item ? item.width : 0
-        Layout.minimumHeight: item ? item.height : 0
-        Layout.maximumHeight: item ? item.height : 0
-
-        source: "Tooltip.qml"
-    }
 
     //We need Local to be *always* present, even if not disaplayed as
     //it's used for formatting in ToolTip.dateTimeChanged()
     property var allTimezones
-    Connections {
-        target: plasmoid.configuration
-        onSelectedTimeZonesChanged: root.initTimezones();
-    }
+
 
     PlasmaCore.DataSource {
         id: dataSource
@@ -89,22 +77,9 @@ Item {
         return format;
     }
 
-    function action_clockkcm() {
-        KCMShell.open("clock");
-    }
-
-    function action_formatskcm() {
-        KCMShell.open("formats");
-    }
 
     Component.onCompleted: {
         root.initTimezones();
-        if (KCMShell.authorize("clock.desktop").length > 0) {
-            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
-        }
-        if (KCMShell.authorize("formats.desktop").length > 0) {
-            plasmoid.setAction("formatskcm", i18n("Set Time Format..."));
-        }
 
         // Set the list of enabled plugins from config
         // to the manager
