@@ -34,7 +34,7 @@ else:
 
 
     with open('/home/private/daily_log', 'a') as f:
-        f.write("--------end of " + today_date + "--------\n")
+        f.write("-------- " + today_date + "--------\n")
 
 
     with open('/home/public/arxiv_feed', 'a') as f:
