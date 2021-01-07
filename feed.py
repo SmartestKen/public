@@ -3,6 +3,7 @@ with open("/home/public/arxiv_feed") as f:
 
 from datetime import date
 today_date = str(date.today())
+today_weekday = str(date
 if content[-1].strip() == "--------end of " + today_date + "--------":
     print("feed already updated")
 else:
@@ -33,7 +34,10 @@ else:
             f.write("%s\n" % item)
         f.write("--------end of " + today_date + "--------\n")
 
-
+    with open('/home/private/daily_log', 'a') as f:
+        for item in list(url_set.difference({x.strip() for x in content})):
+            f.write("%s\n" % item)
+        f.write("--------end of " + today_date + "--------\n")
 
 
 
