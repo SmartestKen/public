@@ -6,8 +6,6 @@ import org.kde.plasma.private.digitalclock 1.0
 
 Item {
     id: main
-
-    property string timeFormat
     property date currentTime
 
 
