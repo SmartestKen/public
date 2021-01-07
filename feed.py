@@ -1,8 +1,11 @@
 with open("/home/public/arxiv_feed") as f:
     content = f.readlines()
 
-from datetime import date
-today_date = str(date.today())
+import datetime
+date_obj = datetime.datetime.today().date()
+weekday_list = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+                "Friday", "Saturday"]
+today_date = str(date_obj.date()) + " " +
 today_weekday = str(date
 if content[-1].strip() == "--------end of " + today_date + "--------":
     print("feed already updated")
