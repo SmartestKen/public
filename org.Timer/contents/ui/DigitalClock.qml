@@ -128,7 +128,7 @@ Item {
                 text: {
 
                     main.currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
-                    return Qt.formatTime(currentTime, main.timeFormat);
+                    return Qt.formatTime(currentTime, "hh:mm");
                 }
 
                 verticalAlignment: Text.AlignVCenter
@@ -172,8 +172,7 @@ Item {
         var delimiter = match[2];
         var minutes = match[3]
         var seconds = "ss";
-        var amPm = "AP";
-        var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") == -1;
+
 
         // because QLocale is incredibly stupid and does not convert 12h/24h clock format
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
@@ -183,10 +182,7 @@ Item {
             result += delimiter + seconds + "blabla";
         }
 
-        // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
-        if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
-            result += " " + amPm;
-        }
+
 
         main.timeFormat = result;
         setupLabels();
