@@ -2,11 +2,11 @@ with open("/home/public/arxiv_feed") as f:
     content = f.readlines()
 
 import datetime
-date_obj = datetime.datetime.today().date()
-weekday_list = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-                "Friday", "Saturday"]
-today_date = str(date_obj.date()) + " " +
-today_weekday = str(date
+date_obj = datetime.datetime.today()
+weekday_list = ["Monday", "Tuesday", "Wednesday", "Thursday",
+                "Friday", "Saturday", "Sunday"]
+today_date = str(date_obj.date()) + " " + str(weekday_list[date_obj.weekday()])
+
 if content[-1].strip() == "--------end of " + today_date + "--------":
     print("feed already updated")
 else:
@@ -32,15 +32,17 @@ else:
 
     url_set = set.intersection(url_set1, url_set2)
 
+
+    with open('/home/private/daily_log', 'a') as f:
+        f.write("--------end of " + today_date + "--------\n")
+
+
     with open('/home/public/arxiv_feed', 'a') as f:
         for item in list(url_set.difference({x.strip() for x in content})):
             f.write("%s\n" % item)
         f.write("--------end of " + today_date + "--------\n")
 
-    with open('/home/private/daily_log', 'a') as f:
-        for item in list(url_set.difference({x.strip() for x in content})):
-            f.write("%s\n" % item)
-        f.write("--------end of " + today_date + "--------\n")
+
 
 
 
