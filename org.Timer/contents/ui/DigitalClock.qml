@@ -1,23 +1,3 @@
-/*
- * Copyright 2013 Heena Mahour <heena393@gmail.com>
- * Copyright 2013 Sebastian Kügler <sebas@kde.org>
- * Copyright 2013 Martin Klapetek <mklapetek@kde.org>
- * Copyright 2014 David Edmundson <davidedmundson@kde.org>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -32,15 +12,7 @@ Item {
 
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showDate: plasmoid.configuration.showDate
-    property int dateFormat: {
-        if (plasmoid.configuration.dateFormat === "longDate") {
-            return  Qt.SystemLocaleLongDate;
-        } else if (plasmoid.configuration.dateFormat === "isoDate") {
-            return Qt.ISODate;
-        }
 
-        return Qt.SystemLocaleShortDate;
-    }
 
     property int use24hFormat: plasmoid.configuration.use24hFormat
 
@@ -49,9 +21,6 @@ Item {
 
 
 
-    onDateFormatChanged: {
-        setupLabels();
-    }
 
     // onStateChanged: { setupLabels(); }
 
@@ -101,22 +70,8 @@ Item {
 
 
 
-            PropertyChanges {
-                target: dateLabel
 
-                height: 0.8 * timeLabel.height
-                width: Math.max(timeLabel.contentWidth, units.gridUnit * 3)
 
-                fontSizeMode: Text.Fit
-                minimumPixelSize: 1
-            }
-
-            AnchorChanges {
-                target: dateLabel
-
-                anchors.top: labelsGrid.bottom
-                anchors.horizontalCenter: labelsGrid.horizontalCenter
-            }
 
             PropertyChanges {
                 target: sizehelper
@@ -182,20 +137,7 @@ Item {
 
         }
 
-        Components.Label {
-            id: dateLabel
 
-            visible: main.showDate
-
-            font.family: timeLabel.font.family
-            font.weight: timeLabel.font.weight
-            font.italic: timeLabel.font.italic
-            font.pixelSize: 1024
-            minimumPixelSize: 1
-
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-        }
     }
     /*
      * end: Visible Elements
@@ -238,7 +180,7 @@ Item {
         var result = hours.toLowerCase() + delimiter + minutes;
 
         if (main.showSeconds) {
-            result += delimiter + seconds;
+            result += delimiter + seconds + "blabla";
         }
 
         // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
@@ -251,27 +193,13 @@ Item {
     }
 
     function setupLabels() {
-        
-
-
-
-
-        if (main.showDate) {
-            dateLabel.text = Qt.formatDate(main.currentTime, main.dateFormat);
-        } else {
-            // clear it so it doesn't take space in the layout
-            dateLabel.text = "";
-        }
-
         // find widest character between 0 and 9
         var maximumWidthNumber = 0;
         var maximumAdvanceWidth = 0;
 
         // replace all placeholders with the widest number (two digits)
         var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
-        // build the time string twice, once with an AM time and once with a PM time
-        var date = new Date(2000, 0, 1, 1, 0, 0);
-        // set the sizehelper's text to the widest time string
+
 
     }
 

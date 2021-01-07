@@ -59,7 +59,7 @@
     </entry>
     <entry name="use24hFormat" type="UInt">
       <label>Force the clock to use 12/24 hour time, instead of following the user locale.</label>
-      <default>1</default>
+      <default>0</default>
     </entry>
     <entry name="enabledCalendarPlugins" type="StringList">
       <label>A list of plugins where additional calendar event data can be sourced.</label>
