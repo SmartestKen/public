@@ -48,10 +48,7 @@ Item {
     property int use24hFormat: plasmoid.configuration.use24hFormat
 
     property string lastDate: ""
-    property int tzOffset
 
-    // This is the index in the list of user selected timezones
-    property int tzIndex: 0
 
     // if the date/timezone cannot be fit with the smallest font to its designated space
     readonly property bool oneLineMode: plasmoid.formFactor == PlasmaCore.Types.Horizontal &&
@@ -82,7 +79,6 @@ Item {
             }
 
             setupLabels();
-            setTimezoneIndex();
         }
     }
 
@@ -171,48 +167,7 @@ Item {
         }
     ]
 
-    MouseArea {
-        id: mouseArea
-
-        property int wheelDelta: 0
-
-        anchors.fill: parent
-
-        onClicked: plasmoid.expanded = !plasmoid.expanded
-        onWheel: {
-            if (!plasmoid.configuration.wheelChangesTimezone) {
-                return;
-            }
-
-            var delta = wheel.angleDelta.y || wheel.angleDelta.x
-            var newIndex = main.tzIndex;
-            wheelDelta += delta;
-            // magic number 120 for common "one click"
-            // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-            while (wheelDelta >= 120) {
-                wheelDelta -= 120;
-                newIndex--;
-            }
-            while (wheelDelta <= -120) {
-                wheelDelta += 120;
-                newIndex++;
-            }
-
-            if (newIndex >= plasmoid.configuration.selectedTimeZones.length) {
-                newIndex = 0;
-            } else if (newIndex < 0) {
-                newIndex = plasmoid.configuration.selectedTimeZones.length - 1;
-            }
-
-            if (newIndex != main.tzIndex) {
-                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
-                main.tzIndex = newIndex;
-
-                dataSource.dataChanged();
-                setupLabels();
-            }
-        }
-    }
+  
 
    /*
     * Visible elements
@@ -410,29 +365,7 @@ Item {
         }
     }
 
-    function setTimezoneIndex() {
-        for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-            if (plasmoid.configuration.selectedTimeZones[i] == plasmoid.configuration.lastSelectedTimezone) {
-                main.tzIndex = i;
-                break;
-            }
-        }
-    }
 
-    Component.onCompleted: {
-        // Sort the timezones according to their offset
-        // Calling sort() directly on plasmoid.configuration.selectedTimeZones
-        // has no effect, so sort a copy and then assign the copy to it
-        var sortArray = plasmoid.configuration.selectedTimeZones;
-        sortArray.sort(function(a, b) {
-            return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
-        });
-        plasmoid.configuration.selectedTimeZones = sortArray;
 
-        setTimezoneIndex();
-        tzOffset = -(new Date().getTimezoneOffset());
-        dateTimeChanged();
-        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
-        dataSource.onDataChanged.connect(dateTimeChanged);
-    }
+
 }
