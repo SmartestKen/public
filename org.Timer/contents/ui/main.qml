@@ -31,12 +31,30 @@ Item {
 
     width: units.gridUnit * 10
     height: units.gridUnit * 4
-
+    property date currentTime
 
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: DigitalClock { }
+    // Plasmoid.compactRepresentation: DigitalClock { }
+    Plasmoid.compactRepresentation: PlasmaComponents.Label  {
+                id: timeLabel
 
+                font {
+                    family: plasmoid.configuration.fontFamily || theme.defaultFont.family
+                    weight: plasmoid.configuration.boldText ? Font.Bold : theme.defaultFont.weight
+                    italic: plasmoid.configuration.italicText
+                    pixelSize: 1024
+                }
+
+                text: {
+
+                    currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
+                    return "hahaha " + Qt.formatTime(currentTime, "hh:mm:ss");
+                }
+
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+            }
 
     PlasmaCore.DataSource {
         id: dataSource
