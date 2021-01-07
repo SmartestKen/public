@@ -68,19 +68,7 @@ Item {
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
-    Connections {
-        target: plasmoid.configuration
-        onSelectedTimeZonesChanged: {
-            // If the currently selected timezone was removed,
-            // default to the first one in the list
-            var lastSelectedTimezone = plasmoid.configuration.lastSelectedTimezone;
-            if (plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) == -1) {
-                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[0];
-            }
 
-            setupLabels();
-        }
-    }
 
     states: [
 
@@ -305,19 +293,9 @@ Item {
     }
 
     function setupLabels() {
-        var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone != "Local"
-                                                        && dataSource.data["Local"]["Timezone City"] != dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
+        
 
-        var timezoneString = "";
 
-        if (showTimezone) {
-            timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone Abbreviation"]
-                                                                          : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
-            timezoneLabel.text = (main.showDate || main.oneLineMode) && plasmoid.formFactor == PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
-        } else {
-            // this clears the label and that makes it hidden
-            timezoneLabel.text = timezoneString;
-        }
 
 
         if (main.showDate) {
@@ -353,16 +331,6 @@ Item {
             }
         }
 
-        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset != tzOffset) {
-            doCorrections = true;
-            tzOffset = currentTZOffset;
-            Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
-        }
-
-        if (doCorrections) {
-            timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
-        }
     }
 
 
