@@ -31,7 +31,7 @@ Item {
 
     width: units.gridUnit * 10
     height: units.gridUnit * 4
-    property date currentTime
+
 
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
@@ -45,10 +45,15 @@ Item {
                     italic: plasmoid.configuration.italicText
                     pixelSize: 1024
                 }
+                minimumPixelSize: 1
+                height: main.height
+                width: main.width
 
+                fontSizeMode: Text.Fit
+                
                 text: {
 
-                    currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
+                    main.currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
                     return "hahaha " + Qt.formatTime(currentTime, "hh:mm:ss");
                 }
 
