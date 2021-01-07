@@ -10,25 +10,10 @@ Item {
     property string timeFormat
     property date currentTime
 
-    property bool showSeconds: plasmoid.configuration.showSeconds
-    property bool showDate: plasmoid.configuration.showDate
-
-
-    property int use24hFormat: plasmoid.configuration.use24hFormat
-
-    property string lastDate: ""
+    property bool showSeconds: true
 
 
 
-
-
-    // onStateChanged: { setupLabels(); }
-
-
-    onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-
-    onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
 
 
@@ -105,14 +90,7 @@ Item {
             flow: Grid.TopToBottom
             columnSpacing: units.smallSpacing
 
-            Rectangle {
-                height: 0.8 * sizehelper.height
-                width: 1
-                visible: main.showDate && main.oneLineMode
 
-                color: theme.textColor
-                opacity: 0.4
-            }
 
             Components.Label  {
                 id: timeLabel
@@ -128,7 +106,7 @@ Item {
                 text: {
 
                     main.currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
-                    return Qt.formatTime(currentTime, "hh:mm");
+                    return "hahaha " + Qt.formatTime(currentTime, "hh:mm:ss");
                 }
 
                 verticalAlignment: Text.AlignVCenter
