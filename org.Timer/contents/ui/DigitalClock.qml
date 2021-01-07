@@ -53,7 +53,7 @@ Item {
         setupLabels();
     }
 
-    onStateChanged: { setupLabels(); }
+    // onStateChanged: { setupLabels(); }
 
 
     onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
@@ -99,15 +99,7 @@ Item {
                 fontSizeMode: Text.Fit
             }
 
-            PropertyChanges {
-                target: timezoneLabel
 
-                height: 0.7 * timeLabel.height
-                width: main.width
-
-                fontSizeMode: Text.Fit
-                minimumPixelSize: 1
-            }
 
             PropertyChanges {
                 target: dateLabel
@@ -129,17 +121,7 @@ Item {
             PropertyChanges {
                 target: sizehelper
 
-                height: {
-                    if (main.showDate) {
-                        if (timezoneLabel.visible) {
-                            return 0.4 * main.height
-                        }
-                        return 0.56 * main.height
-                    } else if (timezoneLabel.visible) {
-                        return 0.59 * main.height
-                    }
-                    return main.height
-                }
+                height: main.height
                 width: main.width
 
                 fontSizeMode: Text.Fit
@@ -148,7 +130,7 @@ Item {
         }
     ]
 
-  
+
 
    /*
     * Visible elements
@@ -198,18 +180,6 @@ Item {
                 horizontalAlignment: Text.AlignHCenter
             }
 
-            Components.Label {
-                id: timezoneLabel
-
-                font.weight: timeLabel.font.weight
-                font.italic: timeLabel.font.italic
-                font.pixelSize: 1024
-                minimumPixelSize: 1
-
-                visible: text.length > 0
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-            }
         }
 
         Components.Label {
