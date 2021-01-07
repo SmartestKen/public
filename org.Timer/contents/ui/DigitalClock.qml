@@ -189,10 +189,6 @@ Item {
                 minimumPixelSize: 1
 
                 text: {
-                    // get the time for the given timezone from the dataengine
-                    var now = dataSource.data[plasmoid.configuration.lastSelectedTimezone]["DateTime"];
-                    // get current UTC time
-                    var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
                     // add the dataengine TZ offset to it
                     var currentTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
 

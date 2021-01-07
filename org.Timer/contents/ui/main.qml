@@ -41,22 +41,9 @@ Item {
         return new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
     }
 
-    function initTimezones() {
-        var tz  = Array()
-        if (plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
-            tz.push("Local");
-        }
-        root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
-    }
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
-
-
-
-    //We need Local to be *always* present, even if not disaplayed as
-    //it's used for formatting in ToolTip.dateTimeChanged()
-    property var allTimezones
 
 
     PlasmaCore.DataSource {
@@ -77,12 +64,4 @@ Item {
         return format;
     }
 
-
-    Component.onCompleted: {
-        root.initTimezones();
-
-        // Set the list of enabled plugins from config
-        // to the manager
-        PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
-    }
 }
