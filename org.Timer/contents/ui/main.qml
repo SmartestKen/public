@@ -49,7 +49,7 @@ Item {
     PlasmaCore.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: allTimezones
+        connectedSources: "Local"
         interval: plasmoid.configuration.showSeconds ? 1000 : 60000
         intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
