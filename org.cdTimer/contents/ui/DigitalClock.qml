@@ -31,7 +31,6 @@ Item {
     property date currentTime
 
     property bool showSeconds: plasmoid.configuration.showSeconds
-    property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
     property int dateFormat: {
         if (plasmoid.configuration.dateFormat === "longDate") {
@@ -43,28 +42,22 @@ Item {
         return Qt.SystemLocaleShortDate;
     }
 
-    property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
-    property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
     property int use24hFormat: plasmoid.configuration.use24hFormat
 
     property string lastDate: ""
 
 
-    // if the date/timezone cannot be fit with the smallest font to its designated space
-    readonly property bool oneLineMode: plasmoid.formFactor == PlasmaCore.Types.Horizontal &&
-                                        main.height <= 2 * theme.smallestFont.pixelSize &&
-                                        (main.showDate || timezoneLabel.visible)
+
 
     onDateFormatChanged: {
         setupLabels();
     }
 
-    onDisplayTimezoneAsCodeChanged: { setupLabels(); }
     onStateChanged: { setupLabels(); }
 
-    onLastSelectedTimezoneChanged: { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
+
     onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowLocalTimezoneChanged:    { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
+
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
