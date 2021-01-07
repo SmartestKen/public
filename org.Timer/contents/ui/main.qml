@@ -24,22 +24,14 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+
 
 Item {
     id: root
 
     width: units.gridUnit * 10
     height: units.gridUnit * 4
-    property string dateFormatString: setDateFormatString()
-    property date tzDate: {
-        // get the time for the given timezone from the dataengine
-        var now = dataSource.data[plasmoid.configuration.lastSelectedTimezone]["DateTime"];
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        return new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
-    }
+
 
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
@@ -53,15 +45,4 @@ Item {
         interval: plasmoid.configuration.showSeconds ? 1000 : 60000
         intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
-
-    function setDateFormatString() {
-        // remove "dddd" from the locale format string
-        // /all/ locales in LongFormat have "dddd" either
-        // at the beginning or at the end. so we just
-        // remove it + the delimiter and space
-        var format = Qt.locale().dateFormat(Locale.LongFormat);
-        format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
-        return format;
-    }
-
 }
