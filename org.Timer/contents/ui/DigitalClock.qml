@@ -16,26 +16,12 @@ Item {
         State {
             name: "other"
             when: plasmoid.formFactor != PlasmaCore.Types.Vertical && plasmoid.formFactor != PlasmaCore.Types.Horizontal
-/*
-            PropertyChanges {
-                target: main
-                Layout.fillHeight: false
-                Layout.fillWidth: false
-                Layout.minimumWidth: units.gridUnit * 3
-                Layout.minimumHeight: units.gridUnit * 3
-            }
             
             PropertyChanges {
                 target: contentItem
 
                 height: main.height
                 width: main.width
-            }
-
-            PropertyChanges {
-                target: labelsGrid
-
-                rows: 2
             }
 
             PropertyChanges {
@@ -47,7 +33,7 @@ Item {
                 fontSizeMode: Text.Fit
             }
 
-*/
+
 
 
 

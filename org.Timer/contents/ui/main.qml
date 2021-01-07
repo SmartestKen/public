@@ -35,31 +35,7 @@ Item {
 
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    // Plasmoid.compactRepresentation: DigitalClock { }
-    Plasmoid.compactRepresentation: PlasmaComponents.Label  {
-                id: timeLabel
-
-                font {
-                    family: plasmoid.configuration.fontFamily || theme.defaultFont.family
-                    weight: plasmoid.configuration.boldText ? Font.Bold : theme.defaultFont.weight
-                    italic: plasmoid.configuration.italicText
-                    pixelSize: 1024
-                }
-                minimumPixelSize: 1
-                height: main.height
-                width: main.width
-
-                fontSizeMode: Text.Fit
-                
-                text: {
-
-                    main.currentTime = new Date(dataSource.data["Local"]["DateTime"].getTime());
-                    return "hahaha " + Qt.formatTime(currentTime, "hh:mm:ss");
-                }
-
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-            }
+    Plasmoid.compactRepresentation: DigitalClock { }
 
     PlasmaCore.DataSource {
         id: dataSource
