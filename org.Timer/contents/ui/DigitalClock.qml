@@ -10,12 +10,6 @@ Item {
     property string timeFormat
     property date currentTime
 
-    property bool showSeconds: true
-
-
-
-
-
 
     states: [
 
@@ -132,54 +126,5 @@ Item {
 
         visible: false
     }
-
-
-    // Qt's QLocale does not offer any modular time creating like Klocale did
-    // eg. no "gimme time with seconds" or "gimme time without seconds and with timezone".
-    // QLocale supports only two formats - Long and Short. Long is unusable in many situations
-    // and Short does not provide seconds. So if seconds are enabled, we need to add it here.
-    //
-    // What happens here is that it looks for the delimiter between "h" and "m", takes it
-    // and appends it after "mm" and then appends "ss" for the seconds.
-    
-    function timeFormatCorrection(timeFormatString) {
-        var regexp = /(hh*)(.+)(mm)/i
-        var match = regexp.exec(timeFormatString);
-
-        var hours = match[1];
-        var delimiter = match[2];
-        var minutes = match[3]
-        var seconds = "ss";
-
-
-        // because QLocale is incredibly stupid and does not convert 12h/24h clock format
-        // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
-        var result = hours.toLowerCase() + delimiter + minutes;
-
-        if (main.showSeconds) {
-            result += delimiter + seconds + "blabla";
-        }
-
-
-
-        main.timeFormat = result;
-        setupLabels();
-    }
-
-    function setupLabels() {
-        // find widest character between 0 and 9
-        var maximumWidthNumber = 0;
-        var maximumAdvanceWidth = 0;
-
-        // replace all placeholders with the widest number (two digits)
-        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
-
-
-    }
-
-
-
-
-
 
 }
