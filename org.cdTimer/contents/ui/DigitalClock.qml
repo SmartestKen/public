@@ -87,89 +87,6 @@ Item {
     }
 
     states: [
-        State {
-            name: "horizontalPanel"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && !main.oneLineMode
-
-            PropertyChanges {
-                target: main
-                Layout.fillHeight: true
-                Layout.fillWidth: false
-                Layout.minimumWidth: contentItem.width
-                Layout.maximumWidth: Layout.minimumWidth
-            }
-
-            PropertyChanges {
-                target: contentItem
-
-                height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                width: Math.max(labelsGrid.width, timezoneLabel.paintedWidth, dateLabel.paintedWidth)
-            }
-
-            PropertyChanges {
-                target: labelsGrid
-
-                rows: main.showDate ? 1 : 2
-            }
-
-            AnchorChanges {
-                target: labelsGrid
-
-                anchors.horizontalCenter: contentItem.horizontalCenter
-            }
-
-            PropertyChanges {
-                target: timeLabel
-
-                height: sizehelper.height
-                width: sizehelper.contentWidth
-
-                font.pixelSize: timeLabel.height
-            }
-
-            PropertyChanges {
-                target: timezoneLabel
-
-                height: main.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
-                width: main.showDate ? timezoneLabel.paintedWidth : timeLabel.width
-
-                font.pixelSize: timezoneLabel.height
-            }
-
-            PropertyChanges {
-                target: dateLabel
-
-                height: 0.8 * timeLabel.height
-                width: dateLabel.paintedWidth
-
-                font.pixelSize: dateLabel.height
-            }
-
-            AnchorChanges {
-                target: dateLabel
-
-                anchors.top: labelsGrid.bottom
-                anchors.horizontalCenter: labelsGrid.horizontalCenter
-            }
-
-            PropertyChanges {
-                target: sizehelper
-
-                /*
-                 * The value 0.71 was picked by testing to give the clock the right
-                 * size (aligned with tray icons).
-                 * Value 0.56 seems to be chosen rather arbitrary as well such that
-                 * the time label is slightly larger than the date or timezone label
-                 * and still fits well into the panel with all the applied margins.
-                 */
-                height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
-                                 3 * theme.defaultFont.pixelSize)
-
-                font.pixelSize: sizehelper.height
-            }
-        },
-
-
 
         State {
             name: "other"
@@ -396,13 +313,6 @@ Item {
         visible: false
     }
 
-    FontMetrics {
-        id: timeMetrics
-
-        font.family: timeLabel.font.family
-        font.weight: timeLabel.font.weight
-        font.italic: timeLabel.font.italic
-    }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
     // eg. no "gimme time with seconds" or "gimme time without seconds and with timezone".
@@ -465,13 +375,7 @@ Item {
         // find widest character between 0 and 9
         var maximumWidthNumber = 0;
         var maximumAdvanceWidth = 0;
-        for (var i = 0; i <= 9; i++) {
-            var advanceWidth = timeMetrics.advanceWidth(i);
-            if (advanceWidth > maximumAdvanceWidth) {
-                maximumAdvanceWidth = advanceWidth;
-                maximumWidthNumber = i;
-            }
-        }
+
         // replace all placeholders with the widest number (two digits)
         var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
