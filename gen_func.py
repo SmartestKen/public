@@ -10,8 +10,8 @@ for k in range(1,100):
     for b in range(1,100):
         # !!! generate index = 0 with probability 0.7
         index = 0
-        data_in[index].append([(-1)**n*k**n/b**(n+1) for n in range(1,100)])
-        data_out[index].append([k,b])
+        data_in[index].append([c*(-1)**n*k**n/b**(n+1) for n in range(1,100)])
+        data_out[index].append([k,b,c])
 
 
 
