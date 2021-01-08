@@ -55,9 +55,14 @@ history = model.fit(np.asarray(data_in[0]), np.asarray(data_out[0]), epochs = ma
 
 import matplotlib.pyplot as plt
 print(history.history.keys())
+
+axes = plt.gca()
+axes.set_ylim([0,1])
 plt.plot(history.history['mean_absolute_error'])
 plt.plot(list(range(0,max_epoch,5)), history.history['val_mean_absolute_error'])
 plt.title('model accuracy')
+
+
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
