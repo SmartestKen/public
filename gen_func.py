@@ -1,40 +1,38 @@
-from random import randrange
+
 
 data_in = [[],[]]
 data_out = [[],[]]
 
 import math
+import numpy as np
 # !!! softmax, one category, one node (hence output should be
 # like class 0 -> [1,0], class 1 -> [0,1]
 for k in range(1,100):
     for b in range(1,100):
         # !!! generate index = 0 with probability 0.7
-        index = 0
-        data_in[index].append([c*(-1)**n*k**n/b**(n+1) for n in range(1,100)])
-        data_out[index].append([k,b,c])
+        if np.random.uniform(0, 1) >= 0.7:
+            index = 1
+        else:
+            index = 0
+        data_in[index].append([(-1)**n*k**n/b**(n+1) for n in range(100)])
+        data_out[index].append([k,b])
 
 
 
 
-import numpy as np
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers,regularizers,optimizers
 from tensorflow.keras.models import Model
 
 
-input = keras.Input(shape=(1,))
-
+input = keras.Input(shape=(100,))
 
 temp = layers.Dense(512, activation = 'relu', kernel_initializer = 'normal')(input)
-temp = layers.ReLU()(temp)
-
-# temp_res = tf.concat(input*64, 0)
 temp = layers.Dense(64, activation = 'relu', kernel_initializer = 'normal')(temp)
-# temp = layers.Add()([temp, temp_res])
-# temp = layers.ReLU()(temp)
 
-output = layers.Dense(1, activation='linear', kernel_initializer = 'normal')(temp)
+output = layers.Dense(2, activation='linear', kernel_initializer = 'normal')(temp)
 
 model = Model(input, output)
 
