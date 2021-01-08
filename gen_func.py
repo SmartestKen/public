@@ -14,7 +14,7 @@ for k in range(1,100):
             index = 1
         else:
             index = 0
-        data_in[index].append([(-1)**n*k**n/b**(n+1) for n in range(100)])
+        data_in[index].append([k**n/b**(n+1) for n in range(10)])
         data_out[index].append([k,b])
 
 
@@ -27,7 +27,7 @@ from tensorflow.keras import layers,regularizers,optimizers
 from tensorflow.keras.models import Model
 
 
-input = keras.Input(shape=(100,))
+input = keras.Input(shape=(10,))
 
 temp = layers.Dense(512, activation = 'relu', kernel_initializer = 'normal')(input)
 temp = layers.Dense(64, activation = 'relu', kernel_initializer = 'normal')(temp)
