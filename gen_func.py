@@ -7,8 +7,8 @@ import math
 import numpy as np
 # !!! softmax, one category, one node (hence output should be
 # like class 0 -> [1,0], class 1 -> [0,1]
-for k in range(1,100):
-    for b in range(1,100):
+for k in np.arange(1, 10, 0.1):
+    for b in np.arange(1, 10, 0.1):
         # !!! generate index = 0 with probability 0.7
         if np.random.uniform(0, 1) >= 0.7:
             index = 1
