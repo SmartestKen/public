@@ -8,8 +8,9 @@ import math
 # like class 0 -> [1,0], class 1 -> [0,1]
 for k in range(1,100):
     for b in range(1,100):
-
-        data_in[index].append(x)
+        # !!! generate index = 0 with probability 0.7
+        index = 0
+        data_in[index].append([(-1)**n*k**n/b**(n+1) for n in range(1,100)])
         data_out[index].append([k,b])
 
 
