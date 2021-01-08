@@ -17,6 +17,7 @@ for k in np.arange(1, 10, 0.1):
         data_in[index].append([k**n/b**(n+1) for n in range(10)])
         data_out[index].append([k,b])
 
+# 1/(kx-b) -> c/(kx-b)
 
 
 
