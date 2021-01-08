@@ -6,14 +6,11 @@ data_out = [[],[]]
 import math
 # !!! softmax, one category, one node (hence output should be
 # like class 0 -> [1,0], class 1 -> [0,1]
-for i in range(10000):
-    index = 0
-    if randrange(10) > 6:
-        index = 1
-    x = i/10000
-    print(x)
-    data_in[index].append(x)
-    data_out[index].append(math.sin(x))
+for k in range(1,100):
+    for b in range(1,100):
+
+        data_in[index].append(x)
+        data_out[index].append([k,b])
 
 
 
