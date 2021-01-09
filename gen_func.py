@@ -19,7 +19,7 @@ for k in np.arange(1, 10, 0.1):
 
 # 1/(kx-b) -> c/(kx-b)
 
-
+# 1/(k-x) -> 1/(1-2x+x^2)
 
 
 import tensorflow as tf
