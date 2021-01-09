@@ -20,7 +20,7 @@ for k in np.arange(1, 10, 0.1):
 # 1/(kx-b) -> c/(kx-b)
 
 # 1/(k-x) -> 1/(1-2x+x^2)
-# -> construct linear recurrence and take the coeff as ouput
+# -> construct linear recurrence and take the coeff as output
 
 import tensorflow as tf
 from tensorflow import keras
