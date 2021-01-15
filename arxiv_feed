@@ -16,6 +16,10 @@ textboooks
      Convex optimization S Boyd, SP Boyd, L Vandenberghe
      Lectures on modern convex optimization: analysis, algorithms, and engineering applications
     
+    
+    Sparse and Redundant Representations
+    
+    
 http://arxiv.org/abs/2012.04868 [delay]
 http://arxiv.org/abs/2012.04715 [delay]
 
@@ -30,15 +34,22 @@ Sheaves, Cosheaves, and Applications.
     
 
 http://arxiv.org/abs/2012.07903 [delay]
---------end of 2020-12-16--------
---------end of 2020-12-17--------
-http://arxiv.org/abs/2012.09202
---------end of 2020-12-18--------
---------end of 2020-12-19--------
---------end of 2020-12-20--------
---------end of 2020-12-21--------
-http://arxiv.org/abs/2009.06120
-http://arxiv.org/abs/2011.04468
+
+The power of convex relaxation: Near-optimal matrix completion
+The advantages of careful seeding
+    http://arxiv.org/abs/2012.09202
+
+    
+Infinite dimensional optimization and control theory
+Nonlinear Optimal Control via Occupation Measures and LMI-Relaxations
+    http://arxiv.org/abs/2009.06120
+    
+Compressed sensing
+Stable signal recovery from incomplete and inaccurate measurements
+Sparse approximate solutions to linear systems
+    http://arxiv.org/abs/2011.04468
+    
+    
 --------end of 2020-12-22--------
 http://arxiv.org/abs/1904.05981
 --------end of 2020-12-23--------
