@@ -109,6 +109,16 @@ A Polynomial-time Approximation Algorithm for the Permanent of a Matrix with Non
 -> det of 3 sub square mat in [a b c ; d e f]  in k[a,b,c,d,e,f]
     <ae-bd af-dc bf-ce>  ---> commutative algebra by eisenbud
 
+    
+    
+Algorithms in invariant theory (1035)
+    Commutative Algebra: with a view toward algebraic geometry (7392)
+        Monomial algebras
+    Computational invariant theory
+        
+A Singular introduction to commutative algebra (1104)    
+    Monomial algebras (763)
+    
 --------end of 2021-01-15 Friday--------
 http://arxiv.org/abs/2101.00401
 http://arxiv.org/abs/2101.05773
