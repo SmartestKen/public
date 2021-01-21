@@ -104,10 +104,7 @@ The complexity of the network design problem
 The complexity of computing the permanent
 A Polynomial-time Approximation Algorithm for the Permanent of a Matrix with Nonnegative Entries
     http://arxiv.org/abs/2002.04149
-    
--> darsken, computational inva theory
--> det of 3 sub square mat in [a b c ; d e f]  in k[a,b,c,d,e,f]
-    <ae-bd af-dc bf-ce>  ---> commutative algebra by eisenbud
+
 
     
     
