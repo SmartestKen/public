@@ -1,3 +1,7 @@
+book [>=1000]
+
+goal: to publish paper that prepare me for next stage
+
 Persistence images: a stable vector representation of persistent homology
     http://arxiv.org/abs/2011.13580
     http://arxiv.org/abs/2011.14057
