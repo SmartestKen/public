@@ -32,9 +32,6 @@ else:
     url_set = set.intersection(url_set1, url_set2)
 
 
-    with open('/home/private/daily_log', 'a') as f:
-        f.write("-------- " + today_date + "--------\n")
-
 
     with open('/home/public/arxiv_feed', 'a') as f:
         for item in list(url_set.difference({x.strip() for x in content})):
