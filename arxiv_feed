@@ -1,7 +1,10 @@
-book [>=1000]
+paper only 
+- relevant to symbolic computation/optimization/learning
+- from high to low, threshold >= 500, 
+- recent 10 years
 
 goal: to publish paper that prepare me for next stage
-(requier symbolic computation/optimization/learning)
+
 
 Persistence images: a stable vector representation of persistent homology
     http://arxiv.org/abs/2011.13580
