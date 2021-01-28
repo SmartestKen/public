@@ -26,11 +26,14 @@ else:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
         url_set2.update([x.id for x in feed])
 
-    feed = feedparser.parse("http://arxiv.org/rss/" + category).entries["math.OC"]
+    url_set = set()
+    feed = feedparser.parse("http://arxiv.org/rss/" + "math.OC").entries
+    url_set.update([x.id for x in feed])
+    print(len(url_set))
 
-
-    url_set = set.intersection(url_set1, url_set2)
-
+    url_set.update(set.intersection(url_set1, url_set2))
+    print(len(url_set))
+    exit(0)
 
 
     with open('/home/public/arxiv_feed', 'a') as f:
