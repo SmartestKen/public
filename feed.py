@@ -13,20 +13,20 @@ else:
 
     import feedparser
     url_set1 = set()
-
-
     feed_list1 = ["math.AC", "math.AG", "math.CO", "math.RT", "math.AT",
                   "math.CT", "math.RA", "math.QA", "math.KT", "math.GR",
                   "cs.MS",  "cs.SC"]
     for category in feed_list1:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
         url_set1.update([x.id for x in feed])
+
     url_set2 = set()
-    feed_list2 = ["cs.LG", "cs.AI", "stat.ML", "math.OC" , "eess.SY"]
+    feed_list2 = ["cs.LG", "cs.AI", "stat.ML", "eess.SY"]
     for category in feed_list2:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
         url_set2.update([x.id for x in feed])
 
+    feed = feedparser.parse("http://arxiv.org/rss/" + category).entries["math.OC"]
 
 
     url_set = set.intersection(url_set1, url_set2)
