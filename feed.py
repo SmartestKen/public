@@ -22,7 +22,7 @@ else:
         url_set1.update([x.id for x in feed])
 
     url_set2 = set()
-    feed_list2 = ["cs.LG", "cs.AI", "stat.ML", "math.OC", "cs.SC", "eess.SY"]
+    feed_list2 = ["cs.LG", "cs.AI", "stat.ML", "math.OC", , "eess.SY"]
     for category in feed_list2:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
         url_set2.update([x.id for x in feed])
