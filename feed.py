@@ -17,7 +17,7 @@ else:
 
     feed_list1 = ["math.AC", "math.AG", "math.CO", "math.RT", "math.AT",
                   "math.CT", "math.RA", "math.QA", "math.KT", "math.GR",
-                  "cs.MS", "cs.SC"]
+                  "cs.MS",  "cs.SC"]
     for category in feed_list1:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
         url_set1.update([x.id for x in feed])
