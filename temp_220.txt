@@ -51,6 +51,6 @@ Hence the solution to Mittag-Leffler problem is simply $\sum_{n \geq 1} \frac{\s
 By the previous homework, $\sigma(z)$ converges absolutely. Hence its logarithmic derivative $\zeta (z)$ also converges. Hence it is a solution to some Mittag Lefler problem. By observation, we see that it have $\Lambda$ as its set of poles, $\frac{1}{z-\lambda}$  as principal part of Laurent series centered at any $\lambda$
 
 
-(b) Given a solution $f(z) = \prod_{n} 
+(b) Given a solution $f(z) = z^n\prod_{n} E_{p_n}(z/a_n) = z^n\prod_{n}(1-z/a_n)e^h$, where $h$ is an entire function. We take the logarithmic derivative 
 
 \end{document}
