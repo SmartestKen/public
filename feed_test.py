@@ -1,7 +1,7 @@
 import urllib.request
 import feedparser
 
-url = 'http://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=100'
+url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=40000&max_results=10'
 data = urllib.request.urlopen(url).read()
 feed = feedparser.parse(data)
 for entry in feed.entries:
