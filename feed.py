@@ -37,7 +37,7 @@ else:
 
     with open('/home/public/arxiv_feed', 'a') as f:
         for item in list(url_set.difference({x.strip() for x in content})):
-            f.write("%s\n" % item)
+            f.write("%s\n\n" % item)
         f.write("--------end of " + today_date + "--------\n")
 
 
