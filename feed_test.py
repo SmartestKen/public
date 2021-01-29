@@ -1,17 +1,19 @@
-import urllib
-
-url = 'http://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1'
-data = urllib.urlopen(url).read()
-print(data)
-
-
 import urllib.request
-
-import time
 import feedparser
 
+url = 'http://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=1'
+data = urllib.request.urlopen(url).read()
+feed = feedparser.parse(data)
+for entry in feed.entries:
+    print(entry.id)
+    print(entry.title)
+
+
+import time
+
+
 # Base api query url
-base_url = 'http://export.arxiv.org/api/query?';
+base_url = 'http://export.arxiv.org/api/query?'
 
 # Search parameters
 search_query = urllib.parse.quote("ti:machine learning")
