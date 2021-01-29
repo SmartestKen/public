@@ -1,7 +1,7 @@
 import urllib.request
 import feedparser
 
-url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=40000&max_results=10&sortBy=lastUpdatedDate&sortOrder=ascending'
+url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending'
 data = urllib.request.urlopen(url).read()
 feed = feedparser.parse(data)
 for entry in feed.entries:
@@ -12,17 +12,7 @@ for entry in feed.entries:
 import time
 
 
-# Base api query url
-base_url = 'http://export.arxiv.org/api/query?'
 
-# Search parameters
-search_query = urllib.parse.quote("ti:machine learning")
-i = 0
-results_per_iteration = 1000
-wait_time = 3
-papers = []
-year = ""
-print('Searching arXiv for %s' % search_query)
 
 
 '''
