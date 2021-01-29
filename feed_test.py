@@ -1,14 +1,15 @@
 import urllib.request
 import feedparser
 
-url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending'
+url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 data = urllib.request.urlopen(url).read()
 feed = feedparser.parse(data)
+count = 0
 for entry in feed.entries:
     print(entry.id)
     print(entry.title)
-
-
+    count += 1
+print(count)
 import time
 
 
