@@ -51,6 +51,20 @@ Hence the solution to Mittag-Leffler problem is simply $\sum_{n \geq 1} \frac{\s
 By the previous homework, $\sigma(z)$ converges absolutely. Hence its logarithmic derivative $\zeta (z)$ also converges. Hence it is a solution to some Mittag Lefler problem. By observation, we see that it have $\Lambda$ as its set of poles, $\frac{1}{z-\lambda}$  as principal part of Laurent series centered at any $\lambda$
 
 
-(b) Given a solution $f(z) = z^n\prod_{n} E_{p_n}(z/a_n) = z^n\prod_{n}(1-z/a_n)e^h$, where $h$ is an entire function. We take the logarithmic derivative 
+(b) Given a solution $f(z) = z^k_0e^g\prod_{n} (E_{p_n}(z/a_n))^{k_n} = z^ne^f\prod_{n}(1-z/a_n)^{k_n}e^{k_nh_n}$, where $g$ and $h_n$ are entire functions. We take the logarithmic derivative 
+
+$log(f)' = k_0/z + g + \sum_n \frac{k_n}{z-a_n} + h_n$
+
+Again, the convergence of the logarithmic derivative is ensured by the convergence of the original function and therefore it is a solution to some ML problem. By observation, we see that it has 0 and \{a_n\} as its set of poles and have \frac{k_n}{z-a_n} as its principal part of Laurent series at a_n and \frac{k_0}{z} as its principal part of Laurent series at 0.
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
