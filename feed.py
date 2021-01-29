@@ -18,17 +18,17 @@ else:
                   "cs.MS",  "cs.SC"]
     for category in feed_list1:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
-        url_set1.update([x.id for x in feed])
+        url_set1.update([[x.id, x.title] for x in feed])
 
     url_set2 = set()
     feed_list2 = ["cs.LG", "cs.AI", "stat.ML", "eess.SY"]
     for category in feed_list2:
         feed = feedparser.parse("http://arxiv.org/rss/" + category).entries
-        url_set2.update([x.id for x in feed])
+        url_set2.update([[x.id, x.title] for x in feed])
 
     url_set = set()
     feed = feedparser.parse("http://arxiv.org/rss/" + "math.OC").entries
-    url_set.update([x.id for x in feed])
+    url_set.update([[x.id, x.title] for x in feed])
 
     url_set.update(set.intersection(url_set1, url_set2))
 
@@ -37,7 +37,7 @@ else:
 
     with open('/home/public/arxiv_feed', 'a') as f:
         for item in list(url_set.difference({x.strip() for x in content})):
-            f.write("%s\n" % item)
+            f.write(item[0], item[1], "\n")
         f.write("--------end of " + today_date + "--------\n")
 
 

@@ -11,7 +11,7 @@ for category in feed_list1:
 
 url_set = set()
 feed = feedparser.parse("http://arxiv.org/rss/" + "math.OC").entries
-url_set.update([x.id for x in feed])
+url_set.update([[x.id, x.title] for x in feed])
 
 url_set.update(url_set1)
 print(url_set)
