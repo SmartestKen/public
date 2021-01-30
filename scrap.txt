@@ -1,51 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://scholar.google.com/</title></head>
-<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px;" onload="e=document.getElementById('captcha');if(e){e.focus();}">
-<div style="max-width:400px;">
-<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
-<div style="font-size:13px;">
-Our systems have detected unusual traffic from your computer network.  Please try your request again later.  <a href="#" onclick="document.getElementById('infoDiv0').style.display='block';">Why did this happen?</a><br><br>
-<div id="infoDiv0" style="display:none; background-color:#eee; padding:10px; margin:0 0 15px 0; line-height:1.4em;">
-This page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the <a href="//www.google.com/policies/terms/">Terms of Service</a>. The block will expire shortly after those requests stop.<br><br>This traffic may have been sent by malicious software, a browser plug-in, or a script that sends automated requests.  If you share your network connection, ask your administrator for help — a different computer using the same IP address may be responsible.  <a href="//support.google.com/websearch/answer/86640">Learn more</a><br><br>Sometimes you may see this page if you are using advanced terms that robots are known to use, or sending requests very quickly.
-</div><br>
-
-IP address: 2603:8001:8d00:2829:60b1:5840:d061:3b32<br>Time: 2021-01-30T22:02:02Z<br>URL: https://scholar.google.com/<br>
-</div>
-</div>
-
-
-</body></html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://scholar.google.com/</title></head>
-<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px;" onload="e=document.getElementById('captcha');if(e){e.focus();}">
-<div style="max-width:400px;">
-<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
-<div style="font-size:13px;">
-Our systems have detected unusual traffic from your computer network.  Please try your request again later.  <a href="#" onclick="document.getElementById('infoDiv0').style.display='block';">Why did this happen?</a><br><br>
-<div id="infoDiv0" style="display:none; background-color:#eee; padding:10px; margin:0 0 15px 0; line-height:1.4em;">
-This page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the <a href="//www.google.com/policies/terms/">Terms of Service</a>. The block will expire shortly after those requests stop.<br><br>This traffic may have been sent by malicious software, a browser plug-in, or a script that sends automated requests.  If you share your network connection, ask your administrator for help — a different computer using the same IP address may be responsible.  <a href="//support.google.com/websearch/answer/86640">Learn more</a><br><br>Sometimes you may see this page if you are using advanced terms that robots are known to use, or sending requests very quickly.
-</div><br>
-
-IP address: 2603:8001:8d00:2829:60b1:5840:d061:3b32<br>Time: 2021-01-30T22:05:11Z<br>URL: https://scholar.google.com/<br>
-</div>
-</div>
-
-
-</body></html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://scholar.google.com/</title></head>
-<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px;" onload="e=document.getElementById('captcha');if(e){e.focus();}">
-<div style="max-width:400px;">
-<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
-<div style="font-size:13px;">
-Our systems have detected unusual traffic from your computer network.  Please try your request again later.  <a href="#" onclick="document.getElementById('infoDiv0').style.display='block';">Why did this happen?</a><br><br>
-<div id="infoDiv0" style="display:none; background-color:#eee; padding:10px; margin:0 0 15px 0; line-height:1.4em;">
-This page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the <a href="//www.google.com/policies/terms/">Terms of Service</a>. The block will expire shortly after those requests stop.<br><br>This traffic may have been sent by malicious software, a browser plug-in, or a script that sends automated requests.  If you share your network connection, ask your administrator for help — a different computer using the same IP address may be responsible.  <a href="//support.google.com/websearch/answer/86640">Learn more</a><br><br>Sometimes you may see this page if you are using advanced terms that robots are known to use, or sending requests very quickly.
-</div><br>
-
-IP address: 2603:8001:8d00:2829:60b1:5840:d061:3b32<br>Time: 2021-01-30T22:36:33Z<br>URL: https://scholar.google.com/<br>
-</div>
-</div>
-
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Chrome Headless Detection (Round II)</title>
+    <style>
+      td:last-child {
+        background-color: #c8d86d;
+        max-width:300px;
+        word-wrap:break-word;
+      }
+      td.failed {
+        background-color: #f45159;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      span.age {
+        float: right;
+        margin-left: 40px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tbody><tr>
+        <th>Test Name</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td>User Agent <span class="age">(Old)</span></td>
+        <td class="failed result" id="user-agent-result">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.66 Safari/537.36</td>
+      </tr>
+      <tr>
+        <td>WebDriver <span class="age">(New)</span></td>
+        <td class="failed result" id="webdriver-result">present (failed)</td>
+      </tr>
+      <tr>
+        <td>Chrome <span class="age">(New)</span></td>
+        <td class="failed result" id="chrome-result">missing (failed)</td>
+      </tr>
+      <tr>
+        <td>Permissions <span class="age">(New)</span></td>
+        <td class="failed result" id="permissions-result">prompt</td>
+      </tr>
+      <tr>
+        <td>Plugins Length <span class="age">(Old)</span></td>
+        <td class="failed result" id="plugins-length-result">0</td>
+      </tr>
+      <tr>
+        <td>Languages <span class="age">(Old)</span></td>
+        <td class="result passed" id="languages-result">en-US</td>
+      </tr>
+    </tbody></table>
+    <script src="chrome-headless-test.js"></script>
+  
 
 </body></html>
