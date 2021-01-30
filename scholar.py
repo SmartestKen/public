@@ -1193,6 +1193,7 @@ scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
 
 
     txt(querier,False)
+    self.article['num_citations']
     return 0
 
 if __name__ == "__main__":
