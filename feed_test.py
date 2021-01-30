@@ -14,9 +14,9 @@ prefix = '{http://www.openarchives.org/OAI/2.0/}'
 prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
 prefix3 = "arxiv.org/abs/"
 
-options = Options()
-options.headless = True
-driver =  webdriver.Chrome(options=options, executable_path="/usr/bin/brave-browser-stable")
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+browser = webdriver.Chrome(chrome_options=options)
 
 for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
@@ -30,7 +30,7 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
 
 
-    driver.get(prefix3 + info.find(prefix2 + "id").text)
+    browser.get(prefix3 + info.find(prefix2 + "id").text)
     print(driver.page_source)
     driver.quit()
 
