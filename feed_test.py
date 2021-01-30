@@ -28,7 +28,7 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
-    url = "https://scholar.google.com/scholar?q=" + info.find(prefix2+"title").text.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
+    url = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=" + info.find(prefix2+"title").text.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
     print(url)
 
     # browser.get(prefix3 + info.find(prefix2 + "id").text)
