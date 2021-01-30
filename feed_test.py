@@ -13,7 +13,7 @@ for entry in feed.entries:
 
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "")
     print(entry.title)
-    data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
+    data = urllib.request.urlopen(urllib.request.Request(url.encode("UTF-8"), headers={'User-Agent': 'Mozilla'})).read()
     index = data.find(b'Cited by ') + 9
     if index != 8:
         print(''.join(filter(str.isdigit, str(data[index:index+7]))))
