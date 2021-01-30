@@ -1,15 +1,11 @@
 import urllib.request
-import feedparser
-import json
+import xml.etree.ElementTree as ET
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2021-01-29&metadataPrefix=arXivRaw"
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
-feed = feedparser.parse(data)
 
-for entry in data.entries:
-    print(entry.id)
-    print(entry.title)
+tree = ET.parse(data)
 
 
 
