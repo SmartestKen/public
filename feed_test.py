@@ -16,7 +16,7 @@ prefix3 = "arxiv.org/abs/"
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
-browser = webdriver.Chrome(chrome_options=options)
+browser = webdriver.Chrome(chrome_options=options, executable_path="/usr/lib/chromium-browser/chromedriver")
 
 for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
@@ -30,8 +30,9 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
 
 
-    browser.get(prefix3 + info.find(prefix2 + "id").text)
-    print(driver.page_source)
+    # browser.get(prefix3 + info.find(prefix2 + "id").text)
+    browser.get('https://google.com')
+    print(browser.page_source)
     driver.quit()
 
     exit(0)
