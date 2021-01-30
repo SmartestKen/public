@@ -1188,6 +1188,7 @@ scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
         options.count = min(options.count, ScholarConf.MAX_PAGE_RESULTS)
         query.set_num_page_results(options.count)
     '''
+    query.set_num_page_results(1)
     querier.send_query(query)
 
 
