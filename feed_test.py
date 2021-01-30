@@ -2,8 +2,8 @@ import urllib.request
 from xml.etree import ElementTree
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
-# date rotation process
-url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2021-01-29&metadataPrefix=arXivRaw"
+# find a previous date from counter
+url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2021-01-27&until=2021-01-27&metadataPrefix=arXivRaw"
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 
 
