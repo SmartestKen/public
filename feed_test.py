@@ -1,8 +1,5 @@
 import urllib.request
 import feedparser
-import time
-import urllib.parse
-import request
 
 url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
@@ -10,12 +7,15 @@ feed = feedparser.parse(data)
 
 proxyDict = {"https": "https://13.212.167,205:8080"}
 for entry in feed.entries:
-    # print(entry.id)
-    # print(entry.title)
+    print(entry.id)
+    print(entry.title)
 
+
+
+'''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
     print(entry.title)
-    data = request.get(url, proxies=proxyDict, headers={'User-Agent': 'Chrome'})
+    data = requests.get(url, proxies=proxyDict, headers={'User-Agent': 'Chrome'})
     index = data.find(b'Cited by ') + 9
     if index != 8:
         print(''.join(filter(str.isdigit, str(data[index:index+7]))))
@@ -23,7 +23,7 @@ for entry in feed.entries:
         print(0, "not found")
     time.sleep(3)
 
-
+'''
 '''
 import urllib.request
 
