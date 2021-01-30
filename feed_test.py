@@ -36,7 +36,7 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     browser.get(url)
     print(browser.page_source)
     # browser.quit()
-
+    # scholarly.pprint(next(
     exit(0)
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
