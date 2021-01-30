@@ -9,13 +9,14 @@ feed = feedparser.parse(data)
 for entry in feed.entries:
     # print(entry.id)
     # print(entry.title)
-    url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace(
+
+    url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "")
+    print(entry.title)
     data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
     index = data.find(b'Cited by ') + 9
     if index != 8:
-        print(entry.title)
         print(''.join(filter(str.isdigit, str(data[index:index+7]))))
-    time.sleep(1)
+    time.sleep(0.3)
 
 
 '''
