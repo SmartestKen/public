@@ -7,9 +7,10 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 print(data)
 root = ElementTree.fromstring(data)
 
-for child in root[2].findall('record'):
-    print(child.tag, child.attrib)
+for record in root[2].findall('record'):
 
+    categories = record.find('metadata').find('categories').text
+    print(categories)
 
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
