@@ -14,7 +14,8 @@ print(count)
 '''
 url = "https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods."
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
-print(data)
+index = data.find("Cited by ")
+print(data[index:index+10])
 '''
 import urllib.request
 
