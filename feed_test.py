@@ -7,8 +7,8 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 print(data)
 root = ElementTree.fromstring(data)
 
-for child in root[0]:
-    print(child.attrib)
+for child in root[2].findall('record'):
+    print(child.tag, child.attrib)
 
 
 '''
