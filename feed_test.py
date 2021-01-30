@@ -1,5 +1,6 @@
 import urllib.request
 import feedparser
+import json
 
 url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
@@ -10,6 +11,8 @@ for entry in feed.entries:
     print(entry.id)
     print(entry.title)
 
+with open('/home/k5shao/Downloads/arxiv-meta.json/arxiv-meta.json') as fd:
+    json_obj = json.load(fd)
 
 
 '''
