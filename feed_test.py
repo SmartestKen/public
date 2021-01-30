@@ -13,9 +13,10 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 prefix = '{http://www.openarchives.org/OAI/2.0/}'
 prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
 prefix3 = "arxiv.org/abs/"
-driver = webdriver.Chrome("/usr/bin/brave-browser-stable")
+
 options = Options()
 options.headless = True
+driver =  webdriver.Chrome(options=options, executable_path="/usr/bin/brave-browser-stable")
 
 for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
@@ -29,7 +30,10 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
 
 
-    webbrowser.open(prefix3 + info.find(prefix2 + "id").text)
+    driver.get(prefix3 + info.find(prefix2 + "id").text)
+    print(driver.page_source)
+    driver.quit()
+
     exit(0)
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
