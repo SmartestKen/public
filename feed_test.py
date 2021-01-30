@@ -1,8 +1,8 @@
 import urllib.request
 import feedparser
-
+'''
 url = 'http://export.arxiv.org/api/query?search_query=all:cs.LG&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
-data = urllib.request.urlopen(url).read()
+data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 feed = feedparser.parse(data)
 count = 0
 for entry in feed.entries:
@@ -11,9 +11,9 @@ for entry in feed.entries:
     count += 1
 print(count)
 
-
-scholar_url = "https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods."
-data = urllib.request.urlopen(scholar_url).read()
+'''
+url = "https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods."
+data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 print(data)
 '''
 import urllib.request
