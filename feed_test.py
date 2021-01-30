@@ -1,6 +1,7 @@
 import urllib.request
 import feedparser
 import time
+import urllib.parse
 
 url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
