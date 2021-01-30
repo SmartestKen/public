@@ -7,9 +7,9 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 print(data)
 root = ElementTree.fromstring(data)
 
-for record in root[2].findall('record'):
-
-    categories = record.find('metadata').find('categories').text
+for record in root[2]:
+    print(record.tag)
+    categories = record.find('{http://www.openarchives.org/OAI/2.0/}metadata').find('categories').text
     print(categories)
 
 '''
