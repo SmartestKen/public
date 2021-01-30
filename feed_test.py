@@ -11,7 +11,10 @@ prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
 for child in root.find(prefix + "ListRecords"):
     info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
     print(info.find(prefix2+"categories").text)
-    print(info.find(prefix2+"categories").text)
+
+    print(info.find(prefix2 + "id").text)
+    print(info.find(prefix2+"title").text)
+
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
 
