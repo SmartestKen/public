@@ -9,8 +9,9 @@ root = ElementTree.fromstring(data)
 prefix = '{http://www.openarchives.org/OAI/2.0/}'
 prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
 for child in root.find(prefix + "ListRecords"):
-    for child2 in child.find(prefix+"metadata").find(prefix2+"arXivRaw"):
-        print(child2.tag)
+    info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
+    print(info.find(prefix2+"categories").text)
+    print(info.find(prefix2+"categories").text)
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
 
