@@ -12,7 +12,7 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 
 prefix = '{http://www.openarchives.org/OAI/2.0/}'
 prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
-prefix3 = "arxiv.org/abs/"
+prefix3 = "https://arxiv.org/abs/"
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
@@ -28,12 +28,13 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
-
+    url = "https://scholar.google.com/scholar?q=" + info.find(prefix2+"title").text.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
+    print(url)
 
     # browser.get(prefix3 + info.find(prefix2 + "id").text)
-    browser.get('https://google.com')
+    browser.get(url)
     print(browser.page_source)
-    driver.quit()
+    browser.quit()
 
     exit(0)
 '''
