@@ -15,14 +15,9 @@ print(count)
 url = "https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods."
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 index = data.find(b'Cited by ') + 9
-print("Hahaha", data[index:index+10])
-citation_count = ""
-for i in range(6):
-    if data[index] != ">":
-        break
-    print(data[index + i])
-    citation_count += str(data[index + i])
-print(citation_count)
+print(data[index:index+7])
+print(''.join(filter(str.isdigit, str(data[index:index+7]))))
+
 
 
 '''
