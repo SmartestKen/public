@@ -1,6 +1,6 @@
 import urllib.request
 from xml.etree import ElementTree
-import webbrowser
+from selenium import webdriver
 
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
@@ -26,7 +26,7 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
 
     webbrowser.open(prefix3 + info.find(prefix2 + "id").text)
-
+    exit(0)
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
     print(entry.title)
