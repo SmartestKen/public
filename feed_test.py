@@ -6,11 +6,10 @@ url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2021-01-29&me
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 print(data)
 root = ElementTree.fromstring(data)
+prefix = '{http://www.openarchives.org/OAI/2.0/}'
+for child in root.find(prefix + "ListRecords")[0][1]:
+    print(child.tag, child.attrib)
 
-for record in root[2]:
-    print(record.tag)
-    categories = record.find('{http://www.openarchives.org/OAI/2.0/}metadata').find('categories').text
-    print(categories)
 
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
