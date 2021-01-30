@@ -10,11 +10,9 @@ for entry in feed.entries:
     print(entry.title)
     count += 1
 print(count)
-import time
 
 
-
-
+"https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods.
 
 '''
 import urllib.request
