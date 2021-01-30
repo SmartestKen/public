@@ -12,8 +12,9 @@ for entry in feed.entries:
 print(count)
 
 
-"https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods.
-
+scholar_url = "https://scholar.google.com/scholar?q=Sequential+Quadratic+Programming+Methods."
+data = urllib.request.urlopen(scholar_url).read()
+print(data)
 '''
 import urllib.request
 
