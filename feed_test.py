@@ -1,5 +1,7 @@
 import urllib.request
 from xml.etree import ElementTree
+import webbrowser
+
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
@@ -22,6 +24,8 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
 
+
+    webbrowser.open(prefix3 + info.find(prefix2 + "id").text)
 
 '''
     url = "https://scholar.google.com/scholar?q=" + entry.title.replace(" ", "+").replace("\n", "").encode("ascii", errors="ignore").decode()
