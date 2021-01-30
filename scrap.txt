@@ -1,32 +1,17 @@
-<html><head><script>start("/");</script>
-<script>addRow("bin","bin",1,4096,"4.0 kB",1610566853,"1/13/21, 11:40:53 AM");</script>
-<script>addRow("boot","boot",1,4096,"4.0 kB",1610814971,"1/16/21, 8:36:11 AM");</script>
-<script>addRow("cdrom","cdrom",1,4096,"4.0 kB",1581412124,"2/11/20, 1:08:44 AM");</script>
-<script>addRow("dev","dev",1,4320,"4.2 kB",1610014670,"1/7/21, 2:17:50 AM");</script>
-<script>addRow("etc","etc",1,12288,"12.0 kB",1612040176,"1/30/21, 12:56:16 PM");</script>
-<script>addRow("home","home",1,4096,"4.0 kB",1589292980,"5/12/20, 7:16:20 AM");</script>
-<script>addRow("lib","lib",1,4096,"4.0 kB",1610093642,"1/8/21, 12:14:02 AM");</script>
-<script>addRow("lib32","lib32",1,4096,"4.0 kB",1610093643,"1/8/21, 12:14:03 AM");</script>
-<script>addRow("lib64","lib64",1,4096,"4.0 kB",1610093641,"1/8/21, 12:14:01 AM");</script>
-<script>addRow("lost+found","lost+found",1,16384,"16.0 kB",1581412038,"2/11/20, 1:07:18 AM");</script>
-<script>addRow("media","media",1,4096,"4.0 kB",1581412835,"2/11/20, 1:20:35 AM");</script>
-<script>addRow("mnt","mnt",1,4096,"4.0 kB",1565031458,"8/5/19, 11:57:38 AM");</script>
-<script>addRow("opt","opt",1,4096,"4.0 kB",1609735362,"1/3/21, 8:42:42 PM");</script>
-<script>addRow("proc","proc",1,0,"0 B",1600923229,"9/23/20, 9:53:49 PM");</script>
-<script>addRow("root","root",1,4096,"4.0 kB",1610093666,"1/8/21, 12:14:26 AM");</script>
-<script>addRow("run","run",1,980,"980 B",1612044355,"1/30/21, 2:05:55 PM");</script>
-<script>addRow("sbin","sbin",1,12288,"12.0 kB",1600443691,"9/18/20, 8:41:31 AM");</script>
-<script>addRow("snap","snap",1,4096,"4.0 kB",1601004177,"9/24/20, 8:22:57 PM");</script>
-<script>addRow("srv","srv",1,4096,"4.0 kB",1565031458,"8/5/19, 11:57:38 AM");</script>
-<script>addRow("sys","sys",1,0,"0 B",1600923230,"9/23/20, 9:53:50 PM");</script>
-<script>addRow("temp","temp",1,4096,"4.0 kB",1608396933,"12/19/20, 8:55:33 AM");</script>
-<script>addRow("tmp","tmp",1,12288,"12.0 kB",1612046649,"1/30/21, 2:44:09 PM");</script>
-<script>addRow("usr","usr",1,4096,"4.0 kB",1610093643,"1/8/21, 12:14:03 AM");</script>
-<script>addRow("var","var",1,4096,"4.0 kB",1565032044,"8/5/19, 12:07:24 PM");</script>
-<script>addRow("initrd.img","initrd.img",0,64383554,"61.4 MB",1610735204,"1/15/21, 10:26:44 AM");</script>
-<script>addRow("initrd.img.old","initrd.img.old",0,64379346,"61.4 MB",1610124295,"1/8/21, 8:44:55 AM");</script>
-<script>addRow("kdeinit5__0","kdeinit5__0",0,0,"0 B",1585672685,"3/31/20, 9:38:05 AM");</script>
-<script>addRow("swapfile","swapfile",0,2147483648,"2.0 GB",1581412043,"2/11/20, 1:07:23 AM");</script>
-<script>addRow("vmlinuz","vmlinuz",0,9388288,"9.0 MB",1610467481,"1/12/21, 8:04:41 AM");</script>
-<script>addRow("vmlinuz.old","vmlinuz.old",0,9388288,"9.0 MB",1609939790,"1/6/21, 5:29:50 AM");</script>
-</head><body></body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://scholar.google.com/</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px;" onload="e=document.getElementById('captcha');if(e){e.focus();}">
+<div style="max-width:400px;">
+<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
+<div style="font-size:13px;">
+Our systems have detected unusual traffic from your computer network.  Please try your request again later.  <a href="#" onclick="document.getElementById('infoDiv0').style.display='block';">Why did this happen?</a><br><br>
+<div id="infoDiv0" style="display:none; background-color:#eee; padding:10px; margin:0 0 15px 0; line-height:1.4em;">
+This page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the <a href="//www.google.com/policies/terms/">Terms of Service</a>. The block will expire shortly after those requests stop.<br><br>This traffic may have been sent by malicious software, a browser plug-in, or a script that sends automated requests.  If you share your network connection, ask your administrator for help — a different computer using the same IP address may be responsible.  <a href="//support.google.com/websearch/answer/86640">Learn more</a><br><br>Sometimes you may see this page if you are using advanced terms that robots are known to use, or sending requests very quickly.
+</div><br>
+
+IP address: 2603:8001:8d00:2829:60b1:5840:d061:3b32<br>Time: 2021-01-30T23:07:02Z<br>URL: https://scholar.google.com/<br>
+</div>
+</div>
+
+
+</body></html>
