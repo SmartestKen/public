@@ -7,8 +7,10 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 print(data)
 root = ElementTree.fromstring(data)
 prefix = '{http://www.openarchives.org/OAI/2.0/}'
+prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
 for child in root.find(prefix + "ListRecords"):
-    print(child.find(prefix+"metadata").find(prefix+"arXivRaw").tag)
+    for child2 in child.find(prefix+"metadata").find(prefix2+"arXivRaw"):
+        print(child2.tag)
     # print(child.find(prefix+"metadata").find(prefix+"arxivRaw").find(prefix+"categories").text)
 
 
