@@ -3,7 +3,7 @@ import feedparser
 import json
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
-url = "http://export.arxiv.org/oai2?verb=ListIdentifiers&set=math:AC&metadataPrefix=oai_dc"
+url = "http://export.arxiv.org/oai2?verb=ListIdentifiers&set=math:AC&from=2021-01-01&metadataPrefix=arXivRaw"
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 feed = feedparser.parse(data)
 
