@@ -1,7 +1,5 @@
 import urllib.request
 from xml.etree import ElementTree
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
