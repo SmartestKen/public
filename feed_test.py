@@ -4,11 +4,20 @@ from datetime import datetime, timedelta
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
 import time
-
+is_collected = 0
 for days_from_today in range(1, 1001):
+
     date = (datetime.today() - timedelta(days=days_from_today)).strftime('%Y-%m-%d')
     url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from="+date+"&until="+date+"&metadataPrefix=arXivRaw"
-    data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
+
+    while is_collected == 0:
+        try:
+            data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
+            is_collected = 1
+        except urllib.error.HTTPError as err:
+            print(err.reason)
+            print(err.headers)
+            exit(0)
 
     feed_set1 = {"math.AC", "math.AG", "math.AT"}
     feed_set2 = {"math.OC"}
