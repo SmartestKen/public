@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
 
-d = datetime.today() - timedelta(days=days_to_subtract)
-url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2015-01-27&until=2015-01-27&metadataPrefix=arXivRaw"
+date = (datetime.today() - timedelta(days=10)).strftime('%Y-%m-%d')
+url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from="+date+"&until="+date+"&metadataPrefix=arXivRaw"
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 
 
