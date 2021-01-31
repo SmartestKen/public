@@ -22,8 +22,7 @@ for days_from_today in range(1, 1001):
     prefix2 = '{http://arxiv.org/OAI/arXivRaw/}'
     prefix3 = "https://arxiv.org/abs/"
 
-    if ElementTree.fromstring(data).find(prefix + "ListRecords") is None:
-        print("No records today, skipping")
+
 
     for child in (ElementTree.fromstring(data).find(prefix + "ListRecords") or []):
         info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
@@ -36,9 +35,12 @@ for days_from_today in range(1, 1001):
             accept_set.add(prefix3 + info.find(prefix2 + "id").text + "\n"
                            + info.find(prefix2+"title").text + "\n")
 
-    with open('/home/public/arxiv_collection', 'w') as f:
+    with open('/home/public/arxiv_collection', 'a') as f:
         for item in list(accept_set):
             f.write("%s" % item)
-        f.write("--------end of " + date + "--------\n")
+        if len(accept_set) > 0:
+            f.write("--------end of " + date + "--------\n")
+        else:
+            print("No records today, skipping")
 
     time.sleep(10)
