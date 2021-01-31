@@ -10,7 +10,7 @@ data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':
 
 feed_set1 = {"math.AC", "math.AG", "math.AT"}
 feed_set2 = {"math.OC"}
-
+accept_set = ()
 
 
 
@@ -24,8 +24,9 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
 
 
     given_set = set(info.find(prefix2 + "categories").text.split())
-
+    if bool(given_set & feed_set1) and bool(given_set & feed_set2):
+        # decide if collect all to print to file and print and write
     # make a feasible filter
-    print(prefix3 + info.find(prefix2 + "id").text)
-    print(info.find(prefix2+"title").text)
+        print(prefix3 + info.find(prefix2 + "id").text)
+        print(info.find(prefix2+"title").text)
 
