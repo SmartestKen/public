@@ -11,8 +11,11 @@ with open("/home/k5shao/Downloads/arxiv-meta.json/arxiv-meta.json", "r") as f:
         art_set = set([x.strip() for x in a["categories"].split()])
         if bool(art_set & feed_set1) and bool(art_set & feed_set2):
             print(a["id"], a["title"])
-            accept_set.add(id_prefix + a["id"] + "\n"
-                           + a["title"] + "\n")
+
+            embed_id = id_prefix + a["id"]
+            embed_title = scholar_prefix + a["title"].replace(" ", "+")
+            accept_set.add('<a href=' + embed_id +'>' +a['id'] + '</a>' + "\n"
+                           + '<a href=' + embed_title +'>' +a['title'] + '</a>' + "\n")
 
 with open('/home/public/arxiv_collection2', 'w') as f:
     for item in list(accept_set):
