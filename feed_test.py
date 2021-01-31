@@ -4,6 +4,12 @@ from datetime import datetime, timedelta
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
 import time
+with open("/home/public/arxiv_feed") as f:
+    content = f.readlines()
+
+if content[-1].strip() == "--------end of " + today_date + "--------":
+    print("feed already updated")
+
 is_collected = 0
 for days_from_today in range(1, 1001):
 
