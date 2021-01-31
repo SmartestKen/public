@@ -13,16 +13,28 @@ Linear Matrix Inequality Representation of Sets (336)
 An algorithm for sums of squares of real polynomials (264)
     From: On sums of squares of $k$-nomials   
 
+PolyBoRi: A framework for Gröbner-basis computations with Boolean polynomials (178)
+    From: A Grobner basis methodology for solving multi objective polynomial
+    
 Semidefinite Representation of Convex Sets (174)
     
 Short rational generating functions for lattice point problems (172)
 
+The Euclidean distance degree of an algebraic variety (157)
+
 On the complexity of Putinar's Positivstellensatz (143)
+
+Orbitopes (128)
 
 There are significantly more nonegative polynomials than sums of squares (122)
     From: On sums of squares of $k$-nomials    
+    
 Semidefinite Characterization and Computation of Real Radical Ideals (110)
     
+The algebraic degree of semidefinite programming (104)    
+
 Solving the Likelihood Equations (100)
+
+Optimal Homologous Cycles, Total Unimodularity, and Linear Programming (98)
 
 Global optimization of polynomials using gradient tentacles and sums of squares (90)
