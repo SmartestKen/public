@@ -14,9 +14,11 @@ with open("/home/k5shao/Downloads/arxiv-meta.json/arxiv-meta.json", "r") as f:
 
             embed_id = id_prefix + a["id"]
             embed_title = scholar_prefix + a["title"].replace(" ", "+")
-            accept_set.add('<a href=' + embed_id +'>' +a['id'] + '</a>' + "\n"
-                           + '<a href=' + embed_title +'>' +a['title'] + '</a>' + "\n")
+            accept_set.add('<a href=' + embed_id +'>' +a['id'] + '</a>' + "<br />\n"
+                           + '<a href=' + embed_title +'>' +a['title'] + '</a>' + "<br />\n")
 
-with open('/home/public/arxiv_collection2', 'w') as f:
+with open('/home/public/arxiv_collect.html', 'w') as f:
+    f.write("<!DOCTYPE html><br />\n<head><br />\n")
     for item in list(accept_set):
         f.write("%s" % item)
+    f.write("</head>")
