@@ -15,10 +15,11 @@ for days_from_today in range(1, 1001):
             data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
             is_collected = 1
         except urllib.error.HTTPError as err:
-            index = err.headers.find("Retry-After: ")+14
-            time.sleep(err.headers
+            index = str(err.headers).find("Retry-After: ")+14
+            wait_time = int(''.join(filter(str.isdigit, err.headers[index, index+5])))+30
+            print("Waiting, sleeping time=", wait_time)
+            time.sleep(wait_time)
 
-            exit(0)
 
     feed_set1 = {"math.AC", "math.AG", "math.AT"}
     feed_set2 = {"math.OC"}
