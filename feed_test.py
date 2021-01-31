@@ -7,13 +7,13 @@ import time
 with open("/home/public/arxiv_feed") as f:
     content = f.readlines()
 
-if content[-1].strip() == "--------end of " + today_date + "--------":
-    print("feed already updated")
+start = datetime.datetime.strptime(content[-1].split[1], '%Y-%m-%d')
+print(start)
 
 is_collected = 0
-for days_from_today in range(1, 1001):
+for days_count in range(1, 1001):
 
-    date = (datetime.today() - timedelta(days=days_from_today)).strftime('%Y-%m-%d')
+    date = (start - timedelta(days=days_count)).strftime('%Y-%m-%d')
     url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from="+date+"&until="+date+"&metadataPrefix=arXivRaw"
 
     while is_collected == 0:
@@ -56,9 +56,6 @@ for days_from_today in range(1, 1001):
     with open('/home/public/arxiv_collection', 'a') as f:
         for item in list(accept_set):
             f.write("%s" % item)
-        if len(accept_set) > 0:
-            f.write("--------end of " + date + "--------\n")
-        else:
-            print("No records today, skipping")
+        f.write("--------end " + date + " --------\n")
 
     time.sleep(60)
