@@ -1,3 +1,5 @@
+Tensor rank and the ill-posedness of the best low-rank approximation (856)
+
 Minimizing Polynomial Functions (436)
 
 Sums of squares of real polynomials (408)
@@ -11,11 +13,16 @@ Linear Matrix Inequality Representation of Sets (336)
 An algorithm for sums of squares of real polynomials (264)
     From: On sums of squares of $k$-nomials   
 
+Semidefinite Representation of Convex Sets (174)
+    
 Short rational generating functions for lattice point problems (172)
 
 On the complexity of Putinar's Positivstellensatz (143)
 
 There are significantly more nonegative polynomials than sums of squares (122)
     From: On sums of squares of $k$-nomials    
-
+Semidefinite Characterization and Computation of Real Radical Ideals (110)
+    
 Solving the Likelihood Equations (100)
+
+Global optimization of polynomials using gradient tentacles and sums of squares (90)
