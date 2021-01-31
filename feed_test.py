@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 # url = 'http://export.arxiv.org/api/query?search_query=all:math.OC&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending'
 # find a previous date from counter
 import time
-with open("/home/public/arxiv_feed") as f:
+with open("/home/public/arxiv_collection") as f:
     content = f.readlines()
-
-start = datetime.datetime.strptime(content[-1].split[1], '%Y-%m-%d')
+print(content[-1].split())
+start = datetime.strptime(content[-1].split()[1], '%Y-%m-%d')
 print(start)
 
 is_collected = 0
