@@ -4,6 +4,7 @@ feed_set1 = {"math.AC", "math.AG", "math.AT"}
 feed_set2 = {"math.OC"}
 accept_set = set()
 id_prefix = "https://arxiv.org/abs/"
+scholar_prefix = "https://scholar.google.com/scholar?q="
 with open("/home/k5shao/Downloads/arxiv-meta.json/arxiv-meta.json", "r") as f:
     for line in f:
         a = json.loads(line)
