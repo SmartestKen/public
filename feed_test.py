@@ -8,8 +8,8 @@ date = (datetime.today() - timedelta(days=10)).strftime('%Y-%m-%d')
 url = "http://export.arxiv.org/oai2?verb=ListRecords&set=math&from="+date+"&until="+date+"&metadataPrefix=arXivRaw"
 data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
 
-feed_set1 = set("math.AC", "math.AG", "math.AT")
-feed_list2 =
+feed_set1 = {"math.AC", "math.AG", "math.AT"}
+feed_set2 = {"math.OC"}
 
 
 
@@ -23,7 +23,8 @@ for child in ElementTree.fromstring(data).find(prefix + "ListRecords"):
     info = child.find(prefix+"metadata").find(prefix2+"arXivRaw")
 
 
-    print(info.find(prefix2 + "categories").text.split())
+    given_set = set(info.find(prefix2 + "categories").text.split())
+
     # make a feasible filter
     print(prefix3 + info.find(prefix2 + "id").text)
     print(info.find(prefix2+"title").text)
