@@ -15,8 +15,8 @@ for days_from_today in range(1, 1001):
             data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla'})).read()
             is_collected = 1
         except urllib.error.HTTPError as err:
-            print(err.reason)
-            print(err.headers)
+
+            err.headers.split("\n")
             exit(0)
 
     feed_set1 = {"math.AC", "math.AG", "math.AT"}
